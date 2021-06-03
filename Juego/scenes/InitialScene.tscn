@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/ciudad_inundada.jpg" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+font_data = ExtResource( 1 )
+
+[node name="InitialScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1080.0
+margin_bottom = 720.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor" type="Panel" parent="."]
+margin_left = 90.0
+margin_right = 990.0
+margin_bottom = 371.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 20.0
+margin_right = 980.0
+margin_bottom = 105.0
+custom_constants/separation = 300
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 880.0
+margin_bottom = 341.0
+custom_constants/separation = 25
+
+[node name="GameTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 880.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "INUNDADOS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameDescription" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_top = 110.0
+margin_right = 880.0
+margin_bottom = 213.0
+custom_fonts/font = SubResource( 2 )
+text = "Bienvenidos a Inundados, el juego donde tenés que arreglar la ciudad para que no se inunde."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="MenuUsage" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_top = 238.0
+margin_right = 880.0
+margin_bottom = 341.0
+custom_fonts/font = SubResource( 3 )
+text = "Utilizá los números o el mouse para navegar por el menú."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CualquierTeclaLabel" type="Label" parent="VBoxContainer"]
+margin_top = 641.0
+margin_right = 880.0
+margin_bottom = 691.0
+custom_fonts/font = SubResource( 4 )
+text = "Pulsá cualquier tecla para continuar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
