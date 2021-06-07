@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=1]
 [ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -57,7 +58,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 283.0
+margin_right = 318.0
 margin_bottom = 247.0
 custom_constants/separation = 25
 __meta__ = {
@@ -65,7 +66,7 @@ __meta__ = {
 }
 
 [node name="MenuTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 283.0
+margin_right = 318.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
 text = "Menu"
@@ -77,11 +78,12 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 283.0
+margin_right = 318.0
 margin_bottom = 166.0
 
 [node name="IniciarJuegoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
-margin_right = 283.0
+margin_left = 17.0
+margin_right = 300.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
@@ -90,12 +92,12 @@ text = "1. Iniciar juego"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 191.0
-margin_right = 283.0
+margin_right = 318.0
 margin_bottom = 247.0
 
 [node name="ConfigurarButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 14.0
-margin_right = 268.0
+margin_left = 32.0
+margin_right = 286.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
@@ -104,19 +106,22 @@ text = "2. Configurar"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 322.0
-margin_right = 283.0
+margin_right = 318.0
 margin_bottom = 378.0
 
 [node name="SalirButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_left = 72.0
-margin_right = 211.0
+margin_right = 318.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "4. Salir"
+text = "4. Salir del juego"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SelectionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
 [connection signal="button_up" from="VBoxContainer/CenterContainer/SalirButton" to="." method="_on_SalirButton_button_up"]
+[connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]
