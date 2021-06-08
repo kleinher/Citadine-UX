@@ -13,7 +13,8 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 		if event.is_action_pressed("1_selection"):
-			pass # TODO: Configuracion de sonido
+			#pass # TODO: Configuracion de sonido
+			get_tree().change_scene("res://scenes/SoudScene.tscn")
 		elif event.is_action_pressed("2_selection"):
 			pass # TODO: Configuracion de resolucion
 		elif event.is_action_pressed("3_selection"):
