@@ -1,22 +1,23 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=1]
-[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=2]
-[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://scenes/ConfigurationScene.gd" type="Script" id=5]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=3]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=4]
+[ext_resource path="res://scenes/ResolucionScene.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
-font_data = ExtResource( 3 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 42
-font_data = ExtResource( 4 )
+font_data = ExtResource( 2 )
 
-[node name="ConfigurationScene" type="Control"]
+[node name="ResolucionScene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 91.9971, 58.9837 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,7 +30,7 @@ margin_left = -1444.0
 margin_top = -425.407
 margin_right = 476.002
 margin_bottom = 854.593
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,7 +40,7 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -268.0
-margin_right = 268.0
+margin_right = 278.0
 margin_bottom = 499.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,18 +59,18 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 457.0
+margin_right = 474.0
 margin_bottom = 328.0
 custom_constants/separation = 25
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ConfigurationTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 457.0
+[node name="ResolucionTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 474.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Configuración"
+text = "Resolución"
 align = 1
 valign = 1
 __meta__ = {
@@ -78,66 +79,67 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 457.0
+margin_right = 474.0
 margin_bottom = 166.0
 
-[node name="SonidoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 135.0
-margin_right = 322.0
-margin_bottom = 56.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
-text = "1. Sonido"
-
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
-margin_top = 191.0
-margin_right = 457.0
-margin_bottom = 247.0
-
-[node name="ResolucionButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 97.0
-margin_right = 360.0
-margin_bottom = 56.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
-text = "2. Resolución"
-
-[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
-margin_top = 272.0
-margin_right = 457.0
-margin_bottom = 328.0
-
-[node name="AccesibilidadButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
-margin_left = 75.0
+[node name="BigButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
+margin_left = 92.0
 margin_right = 382.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "3. Accesibilidad"
+text = "1. 1920 x 1080"
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 403.0
-margin_right = 457.0
-margin_bottom = 459.0
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 191.0
+margin_right = 474.0
+margin_bottom = 247.0
 
-[node name="VolverAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_left = 62.0
-margin_right = 394.0
+[node name="MediumButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+margin_left = 104.0
+margin_right = 370.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "4. Volver al menu"
+text = "2. 1080 x 720"
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 272.0
+margin_right = 474.0
+margin_bottom = 328.0
+
+[node name="SmallButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
+margin_left = 116.0
+margin_right = 358.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "3. 800 x 600"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 403.0
+margin_right = 474.0
+margin_bottom = 459.0
+
+[node name="VolverAConfigButton" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_right = 474.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "4. Volver a configuración"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 4 )
 
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ResolucionButton" to="." method="_on_ResolucionButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAlMenuButton" to="." method="_on_VolverAlMenuButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/BigButton" to="." method="_on_BigButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/MediumButton" to="." method="_on_MediumButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer3/SmallButton" to="." method="_on_SmallButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAConfigButton" to="." method="_on_VolverAlMenuButton_pressed"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]
