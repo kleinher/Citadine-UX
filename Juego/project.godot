@@ -18,6 +18,10 @@ config/name="Citadine-UX"
 run/main_scene="res://scenes/InitialScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globales="*res://globales.gd"
+
 [display]
 
 window/size/width=1080

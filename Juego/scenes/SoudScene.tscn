@@ -13,9 +13,12 @@ size = 72
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 30
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxLine" id=3]
+color = Color( 1, 1, 1, 1 )
+thickness = 10
 
 [sub_resource type="DynamicFont" id=4]
 size = 42
@@ -70,7 +73,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_right = 474.0
-margin_bottom = 129.0
+margin_bottom = 146.0
 custom_constants/separation = 25
 __meta__ = {
 "_edit_use_anchors_": false
@@ -90,32 +93,33 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
 margin_right = 474.0
-margin_bottom = 129.0
+margin_bottom = 146.0
 grow_vertical = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SoundTitle" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 50.0
-margin_bottom = 19.0
+margin_right = 95.0
+margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
 text = "Sonido"
 align = 1
 
 [node name="Music" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 54.0
+margin_left = 99.0
+margin_top = 10.0
 margin_right = 474.0
-margin_bottom = 16.0
+margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_styles/slider = SubResource( 3 )
 min_value = -24.0
 max_value = 0.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 204.0
+margin_top = 221.0
 margin_right = 474.0
-margin_bottom = 260.0
+margin_bottom = 277.0
 
 [node name="VolverAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
 margin_right = 474.0
