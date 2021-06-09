@@ -4,6 +4,7 @@ extends Control
 # Declare member variables here. Examples:
 var a_menu = false
 var a_resolucion = false
+var a_accesibilidad = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +21,8 @@ func _input(event):
 			a_resolucion = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("3_selection"):
-			pass # TODO: Configuracion de accesibilidad
+			a_accesibilidad = true
+			$SelectionSound.play()
 		elif event.is_action_pressed("4_selection"):
 			a_menu = true
 			$SelectionSound.play()
@@ -34,8 +36,14 @@ func _on_VolverAlMenuButton_pressed():
 func _on_SelectionSound_finished():
 	if a_menu: get_tree().change_scene("res://scenes/MainMenu.tscn")
 	elif a_resolucion: get_tree().change_scene("res://scenes/ResolucionScene.tscn")
+	elif a_accesibilidad: get_tree().change_scene("res://scenes/AccesibilidadScene.tscn")
 
 
 func _on_ResolucionButton_pressed():
 	a_resolucion = true
+	$SelectionSound.play()
+
+
+func _on_AccesibilidadButton_pressed():
+	a_accesibilidad = true
 	$SelectionSound.play()
