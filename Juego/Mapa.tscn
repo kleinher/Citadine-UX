@@ -17,7 +17,7 @@ margin_right = 2159.0
 margin_bottom = 1435.0
 color = Color( 0.105882, 0.32549, 0.109804, 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Posicion" type="Label" parent="."]
@@ -31,7 +31,7 @@ align = 1
 valign = 1
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Mapa" type="TileMap" parent="."]
@@ -40,4 +40,3 @@ tile_set = ExtResource( 1 )
 cell_custom_transform = Transform2D( 64, 0, 0, 0, 0, 0 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( 524306, 0, 0, 983065, 1, 0, 1179682, 1, 0, 1376289, 1, 0, 1638473, 1, 0 )
