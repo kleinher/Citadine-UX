@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=1]
 [ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/SoundScene.gd" type="Script" id=5]
 [ext_resource path="res://fonts/Roboto/Roboto-Black.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://resources/Background_tune.ogg" type="AudioStream" id=7]
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -138,6 +139,8 @@ stream = ExtResource( 2 )
 stream = ExtResource( 7 )
 volume_db = -2.0
 pitch_scale = 1.05
+
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 8 )]
 
 [connection signal="value_changed" from="VBoxContainer/VBoxContainer/HBoxContainer/Music" to="." method="_on_volumen_value_changed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAlMenuButton" to="." method="_on_VolverAlMenuButton_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=3]
 [ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=4]
 [ext_resource path="res://scenes/TamañoLetrasScene.gd" type="Script" id=5]
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -38,9 +39,10 @@ __meta__ = {
 [node name="VBoxColor" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -323.0
-margin_right = 323.0
-margin_bottom = 499.0
+margin_left = -334.586
+margin_top = -1.41422
+margin_right = 285.414
+margin_bottom = 497.586
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,9 +50,9 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -283.0
+margin_left = -310.0
 margin_top = 20.0
-margin_right = 283.0
+margin_right = 256.0
 margin_bottom = 567.0
 custom_constants/separation = 75
 __meta__ = {
@@ -137,6 +139,10 @@ __meta__ = {
 
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 6 )]
+margin_left = -245.0
+margin_right = -5.0
 
 [connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAAccesibilidadButton" to="." method="_on_VolverAAccesibilidadButton_pressed"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]
