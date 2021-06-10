@@ -97,13 +97,13 @@ margin_right = 566.0
 margin_bottom = 247.0
 
 [node name="MedioButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 102.0
-margin_right = 464.0
+margin_left = 99.0
+margin_right = 466.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "2. Medio contraste"
+text = "2. Contraste medio"
 
 [node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 272.0
@@ -111,13 +111,13 @@ margin_right = 566.0
 margin_bottom = 328.0
 
 [node name="BajoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
-margin_left = 116.0
-margin_right = 449.0
+margin_left = 119.0
+margin_right = 447.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "3. Bajo Contraste"
+text = "3. Bajo contraste"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 403.0

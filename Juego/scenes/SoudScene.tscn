@@ -100,17 +100,16 @@ __meta__ = {
 }
 
 [node name="SoundTitle" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 95.0
+margin_right = 121.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
-text = "Sonido"
+text = "Volumen"
 align = 1
 
 [node name="Music" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 99.0
-margin_top = 10.0
+margin_left = 125.0
 margin_right = 474.0
-margin_bottom = 26.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 custom_styles/slider = SubResource( 3 )
 min_value = -24.0
