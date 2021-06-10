@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Mapa.tres" type="TileSet" id=1]
+[ext_resource path="res://Mapa.gd" type="Script" id=2]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Posicion.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=4]
+size = 33
+font_data = ExtResource( 3 )
+
+[node name="Node" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2159.0
+margin_bottom = 1435.0
+color = Color( 0.105882, 0.32549, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Posicion" type="Label" parent="."]
+margin_left = 9.48352
+margin_top = 1.65039
+margin_right = 174.484
+margin_bottom = 52.6504
+custom_fonts/font = SubResource( 4 )
+text = "Posicion: ()"
+align = 1
+valign = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapa" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_custom_transform = Transform2D( 64, 0, 0, 0, 0, 0 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 524306, 0, 0, 983065, 1, 0, 1179682, 1, 0, 1376289, 1, 0, 1638473, 1, 0 )
