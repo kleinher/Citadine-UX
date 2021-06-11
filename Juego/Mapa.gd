@@ -10,7 +10,6 @@ func _ready():
 	var auxy =0
 	var local_position = $Mapa.to_local(Vector2(0,100))
 	var tile = $Mapa.world_to_map(local_position)
-	
 	for i in 10:
 		auxy +=150;
 		aux =0;
