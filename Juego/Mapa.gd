@@ -4,7 +4,7 @@ onready var map = get_node("Mapa")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var viejaTile = Vector2(randi(),randi());
 func _ready():
 	$SelectionTool/indicadorMouse.modulate.a = 0.3
 	var aux = 100
@@ -27,8 +27,17 @@ func _process(delta):
 	var mouse_pos = get_global_mouse_position()
 	var local_position = $Mapa.to_local(mouse_pos)
 	var tile = $Mapa.world_to_map(local_position)
-	$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(tile)
-	#print(local_position)
+	
+	if ($Mapa.get_cellv(tile) == -1) and (viejaTile != tile): 
+		$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(tile)
+		$SelectionTool/indicadorMouse.modulate = Color(255,255,153)
+		$SelectionTool/indicadorMouse.modulate.a = 0.3
+		viejaTile = tile
+	elif(viejaTile != tile):
+		$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(tile)
+		$SelectionTool/indicadorMouse.modulate = Color(255,0,0)
+		$SelectionTool/indicadorMouse.modulate.a = 0.3
+		viejaTile = tile
 	
 func _input(event):
 	if event.is_action_pressed("mouse_lclick"):
