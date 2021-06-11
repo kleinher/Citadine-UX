@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Globales="*res://globales.gd"
+ResolutionConfig="*res://ResolutionConfig.gd"
 
 [display]
 

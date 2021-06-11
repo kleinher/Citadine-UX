@@ -17,7 +17,7 @@ func _input(event):
 			$SelectionSoud.play()
 
 func _on_IrAlMenuButton_pressed():
-	get_tree().change_scene("res://scenes/MainMenu.tscn")
+	$SelectionSoud.play()
 
 
 func _on_SelectionSoud_finished():
