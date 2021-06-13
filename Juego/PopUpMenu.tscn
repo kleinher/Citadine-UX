@@ -8,5 +8,7 @@
 margin_right = 20.0
 margin_bottom = 20.0
 theme = SubResource( 1 )
-items = [ "Arbol", null, 0, false, false, 0, 0, null, "", false, "Casa", null, 0, false, false, 1, 0, null, "", false ]
+items = [ "Arbol", null, 0, false, false, 1, 0, null, "", false, "Casa", null, 0, false, false, 0, 0, null, "", false ]
 script = ExtResource( 1 )
+
+[connection signal="id_pressed" from="." to="." method="_on_PopupMenu_id_pressed"]

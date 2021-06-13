@@ -4,6 +4,7 @@ onready var map = get_node("Mapa")
 var menu = preload("res://PopUpMenu.tscn")
 var crearMenu;
 var hayMenu = false;
+var theTile;
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -46,7 +47,7 @@ func _process(delta):
 			$SelectionTool/indicadorMouse.modulate.a = 0.3
 			viejaTile = tile
 			crearMenu = false
-	
+
 func _input(event):
 	
 	var mouse_pos = get_global_mouse_position()
@@ -61,8 +62,10 @@ func _input(event):
 			if crearMenu:
 				var aux = menu.instance();
 				aux.rect_position = mouse_pos
+				theTile = tile
+				aux.connect("menu_activado",self,"elegirObjetoACrear")
 				$SelectionTool/MenuContainer.add_child(aux)
 		
-		#$Mapa.set_cell(tile.x,tile.y,1)
-	
+func elegirObjetoACrear(id):
+	$Mapa.set_cell(theTile.x,theTile.y,id)
 	
