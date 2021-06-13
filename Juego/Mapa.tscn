@@ -29,7 +29,7 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 offset = Vector2( 32, 32 )
 
-[node name="Node2D" type="Node2D" parent="SelectionTool"]
+[node name="MenuContainer" type="Node2D" parent="SelectionTool"]
 
 [node name="Posicion" type="Label" parent="."]
 margin_left = 9.48352
