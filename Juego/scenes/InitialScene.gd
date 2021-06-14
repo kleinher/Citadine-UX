@@ -8,8 +8,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
+	
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		$SelectionSound.play()
@@ -35,3 +35,5 @@ func _on_CualquierTeclaLabel_gui_input(event):
 
 func _on_SelectionSound_finished():
 	get_tree().change_scene("res://scenes/MainMenu.tscn")
+
+

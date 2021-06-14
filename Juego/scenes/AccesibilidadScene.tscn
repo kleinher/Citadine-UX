@@ -1,23 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=4]
-[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=5]
+[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=3]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=4]
+[ext_resource path="res://scenes/AccesibilidadScene.gd" type="Script" id=5]
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
-font_data = ExtResource( 3 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 42
 font_data = ExtResource( 2 )
 
-[node name="MainMenu" type="Control"]
+[node name="AccesibilidadScene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -29,7 +30,7 @@ margin_left = -1444.0
 margin_top = -425.407
 margin_right = 476.002
 margin_bottom = 854.593
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,9 +39,9 @@ __meta__ = {
 [node name="VBoxColor" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -268.0
-margin_right = 268.0
-margin_bottom = 428.0
+margin_left = -273.0
+margin_right = 273.0
+margin_bottom = 499.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,28 +49,28 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -140.0
+margin_left = -233.0
 margin_top = 20.0
-margin_right = 143.0
-margin_bottom = 398.0
-custom_constants/separation = 75
+margin_right = 241.0
+margin_bottom = 473.0
+custom_constants/separation = 150
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 318.0
+margin_right = 474.0
 margin_bottom = 247.0
 custom_constants/separation = 25
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 318.0
+[node name="AccesibilidadTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 474.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Menú"
+text = "Accesibilidad"
 align = 1
 valign = 1
 __meta__ = {
@@ -78,52 +79,54 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 318.0
+margin_right = 474.0
 margin_bottom = 166.0
 
-[node name="IniciarJuegoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 17.0
-margin_right = 300.0
+[node name="TamañoLetrasButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
+margin_left = 45.0
+margin_right = 428.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "1. Iniciar juego"
+text = "1. Tamaño de letras"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 191.0
-margin_right = 318.0
+margin_right = 474.0
 margin_bottom = 247.0
 
-[node name="ConfigurarButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 32.0
-margin_right = 286.0
+[node name="ContrasteButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+margin_left = 117.0
+margin_right = 357.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "2. Configurar"
+text = "2. Contraste"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 322.0
-margin_right = 318.0
-margin_bottom = 378.0
+margin_top = 397.0
+margin_right = 474.0
+margin_bottom = 453.0
 
-[node name="SalirButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_right = 318.0
+[node name="VolverAConfigButton" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_right = 474.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "4. Salir del juego"
+text = "4. Volver a configuración"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 4 )
 
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/IniciarJuegoButton" to="." method="_on_IniciarJuegoButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ConfigurarButton" to="." method="_on_ConfigurarButton_pressed"]
-[connection signal="button_up" from="VBoxContainer/CenterContainer/SalirButton" to="." method="_on_SalirButton_button_up"]
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 6 )]
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/TamañoLetrasButton" to="." method="_on_TamaoLetrasButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ContrasteButton" to="." method="_on_ContrasteButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAConfigButton" to="." method="_on_VolverAConfigButton_pressed"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

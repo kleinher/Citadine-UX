@@ -1,0 +1,151 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=3]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=4]
+[ext_resource path="res://scenes/TamañoLetrasScene.gd" type="Script" id=5]
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 2 )
+
+[node name="TamañoLetrasScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1444.0
+margin_top = -425.407
+margin_right = 476.002
+margin_bottom = 854.593
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -334.586
+margin_top = -1.41422
+margin_right = 285.414
+margin_bottom = 497.586
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -310.0
+margin_top = 20.0
+margin_right = 256.0
+margin_bottom = 567.0
+custom_constants/separation = 75
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 566.0
+margin_bottom = 328.0
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TamañoLetrasTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 566.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "Tamaño de letras"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 110.0
+margin_right = 566.0
+margin_bottom = 166.0
+
+[node name="PequeñaButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
+margin_left = 161.0
+margin_right = 404.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "1. Pequeñas"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 191.0
+margin_right = 566.0
+margin_bottom = 247.0
+
+[node name="MedianoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+margin_left = 162.0
+margin_right = 403.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "2. Medianas"
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 272.0
+margin_right = 566.0
+margin_bottom = 328.0
+
+[node name="GrandeButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
+margin_left = 176.0
+margin_right = 390.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "3. Grandes"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 403.0
+margin_right = 566.0
+margin_bottom = 459.0
+
+[node name="VolverAAccesibilidadButton" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_left = 51.0
+margin_right = 514.0
+margin_bottom = 56.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "4. Volver a accesibilidad"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 6 )]
+margin_left = -245.0
+margin_right = -5.0
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/PequeñaButton" to="." method="_on_PequeaButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/MedianoButton" to="." method="_on_MedianoButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer3/GrandeButton" to="." method="_on_GrandeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAAccesibilidadButton" to="." method="_on_VolverAAccesibilidadButton_pressed"]
+[connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

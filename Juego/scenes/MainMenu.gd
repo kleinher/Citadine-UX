@@ -8,7 +8,7 @@ var a_config = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_font_sizes()
 
 
 func _input(event):
@@ -38,6 +38,11 @@ func _on_ConfigurarButton_pressed():
 	a_config = true
 	$SelectionSound.play()
 
-
 func _on_IniciarJuegoButton_pressed():
 	get_tree().change_scene("res://Mapa.tscn")
+	
+func set_font_sizes():
+	$VBoxContainer/VBoxContainer/MenuTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
+	$VBoxContainer/VBoxContainer/CenterContainer/IniciarJuegoButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/ConfigurarButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/SalirButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())

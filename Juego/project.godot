@@ -18,6 +18,12 @@ config/name="Citadine-UX"
 run/main_scene="res://scenes/InitialScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globales="*res://globales.gd"
+ResolutionConfig="*res://ResolutionConfig.gd"
+TamanioLetrasConfig="*res://TamanioLetrasConfig.gd"
+
 [display]
 
 window/size/width=1080
@@ -59,6 +65,12 @@ mouse_lclick={
 mouse_rclick={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+
+5_selection={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":53,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777355,"unicode":0,"echo":false,"script":null)
+
  ]
 }
 

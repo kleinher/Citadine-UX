@@ -1,7 +1,6 @@
 extends Node
 
 const FILE_NAME = "user://config-data.json"
-var musica = preload("res://musica.tscn")
 var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
@@ -30,8 +29,6 @@ func load_config():
 		printerr("No saved data!")
 
 func _ready():
-	musica.instance().get_node("AudioStreamPlayer").play()
-	AudioStream
 	var config_file = File.new()
 	if not config_file.file_exists(FILE_NAME):
 		save()
