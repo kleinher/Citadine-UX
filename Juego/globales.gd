@@ -1,16 +1,37 @@
 extends Node
 
+const FILE_NAME = "user://config-data.json"
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var config = {
+	"tamanioLetras": 0,
+	"sonido": 0,
+	"contraste": 1,
+	"resolucion": 0,
+}
 
+func save():
+	var file = File.new()
+	file.open(FILE_NAME, File.WRITE)
+	file.store_string(to_json(config))
+	file.close()
 
-# Called when the node enters the scene tree for the first time.
+func load_config():
+	var file = File.new()
+	if file.file_exists(FILE_NAME):
+		file.open(FILE_NAME, File.READ)
+		var data = parse_json(file.get_as_text())
+		file.close()
+		if typeof(data) == TYPE_DICTIONARY:
+			config = data
+		else:
+			printerr("Corrupted data!")
+	else:
+		printerr("No saved data!")
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	var config_file = File.new()
+	if not config_file.file_exists(FILE_NAME):
+		save()
+	else:
+		load_config()
+	

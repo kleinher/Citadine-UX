@@ -12,15 +12,15 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 		if event.is_action_pressed("1_selection"):
-			TamanioLetrasConfig.tamanio_letras = 2
+			TamanioLetrasConfig.set_tamanio_letras(2)
 			set_tamanio = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("2_selection"):
-			TamanioLetrasConfig.tamanio_letras = 1
+			TamanioLetrasConfig.set_tamanio_letras(1)
 			set_tamanio = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("3_selection"):
-			TamanioLetrasConfig.tamanio_letras = 0
+			TamanioLetrasConfig.set_tamanio_letras(0)
 			set_tamanio = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("4_selection"):
@@ -39,19 +39,19 @@ func _on_SelectionSound_finished():
 
 
 func _on_PequeaButton_pressed():
-	TamanioLetrasConfig.tamanio_letras = 2
+	TamanioLetrasConfig.set_tamanio_letras(2)
 	set_tamanio = true
 	$SelectionSound.play()
 
 
 func _on_MedianoButton_pressed():
-	TamanioLetrasConfig.tamanio_letras = 1
+	TamanioLetrasConfig.set_tamanio_letras(1)
 	set_tamanio = true
 	$SelectionSound.play()
 
 
 func _on_GrandeButton_pressed():
-	TamanioLetrasConfig.tamanio_letras = 0
+	TamanioLetrasConfig.set_tamanio_letras(0)
 	set_tamanio = true
 	$SelectionSound.play()
 	
