@@ -123,6 +123,7 @@ __meta__ = {
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/IniciarJuegoButton" to="." method="_on_IniciarJuegoButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ConfigurarButton" to="." method="_on_ConfigurarButton_pressed"]
 [connection signal="button_up" from="VBoxContainer/CenterContainer/SalirButton" to="." method="_on_SalirButton_button_up"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

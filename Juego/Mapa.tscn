@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Mapa.tres" type="TileSet" id=1]
+[ext_resource path="res://Mapa.gd" type="Script" id=2]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Posicion.gd" type="Script" id=4]
+[ext_resource path="res://resources/sprites/posicion.png" type="Texture" id=5]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 3 )
+
+[node name="Juego" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1080.0
+margin_bottom = 720.0
+color = Color( 0.105882, 0.32549, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SelectionTool" type="Node2D" parent="."]
+scale = Vector2( 0.2, 0.2 )
+
+[node name="indicadorMouse" type="Sprite" parent="SelectionTool"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+offset = Vector2( 32, 32 )
+
+[node name="MenuContainer" type="Node2D" parent="SelectionTool"]
+
+[node name="Posicion" type="Label" parent="."]
+visible = false
+margin_left = 9.48352
+margin_top = 1.65039
+margin_right = 174.484
+margin_bottom = 52.6504
+custom_fonts/font = SubResource( 1 )
+text = "Posicion: ()"
+align = 1
+valign = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Mapa" type="TileMap" parent="."]
+scale = Vector2( 0.2, 0.2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 256, 256 )
+cell_custom_transform = Transform2D( 64, 0, 0, 0, 0, 0 )
+cell_tile_origin = 1
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 196614, 536870912, 0, 196616, -1610612733, 0, 196617, -1610612733, 0, 196618, -1610612733, 0, 196619, -1610612733, 0, 196620, -1610612733, 0, 196621, -1610612733, 0, 196623, 0, 0, 262150, 536870912, 0, 262151, 3, 0, 262152, 0, 0, 262157, 536870912, 0, 262158, 3, 0, 262159, 0, 0, 327686, 536870912, 0, 327687, 3, 0, 327688, 0, 0, 327693, 536870912, 0, 327694, 3, 0, 327695, 0, 0, 393222, 536870912, 0, 393223, 3, 0, 393224, 0, 0, 393229, 536870912, 0, 393230, 3, 0, 393231, 0, 0, 458758, 536870912, 0, 458759, 3, 0, 458760, 0, 0, 458765, 536870912, 0, 458766, 3, 0, 458767, 0, 0, 524294, 536870912, 0, 524295, 3, 0, 524296, 0, 0, 524301, 536870912, 0, 524302, 3, 0, 524303, 0, 0, 589830, 536870912, 0, 589831, 3, 0, 589832, 0, 0, 589837, 536870912, 0, 589838, 3, 0, 589839, 0, 0, 655366, 536870912, 0, 655367, 3, 0, 655368, 0, 0, 655373, 536870912, 0, 655374, 3, 0, 655375, 0, 0, 720902, 536870912, 0, 720903, 3, 0, 720904, 0, 0, 720909, 536870912, 0, 720910, 3, 0, 720911, 0, 0, 786438, 536870912, 0, 786440, -1610612733, 0, 786441, -1610612733, 0, 786442, -1610612733, 0, 786443, -1610612733, 0, 786444, -1610612733, 0, 786445, -1610612733, 0, 786447, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 1966157, 1, 0 )
+script = ExtResource( 2 )
+
+[node name="GUI" parent="." instance=ExtResource( 6 )]
+margin_right = 1078.0
+
+[connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
