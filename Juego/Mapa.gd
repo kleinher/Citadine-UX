@@ -8,23 +8,10 @@ var theTile;
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var viejaTile = Vector2(randi(),randi());
+var viejaTile;
 func _ready():
 	$SelectionTool/indicadorMouse.modulate.a = 0.3
-	var aux = 100
-	var auxy =0
-	var local_position = $Mapa.to_local(Vector2(0,100))
-	var tile = $Mapa.world_to_map(local_position)
-	for i in 10:
-		auxy +=150;
-		aux =0;
-		for j in 5:
-			
-			#$Mapa.set_cell(tile,0)
-			aux+=300
-			local_position = $Mapa.to_local(Vector2(aux, auxy))
-			tile = $Mapa.world_to_map(local_position)
-			$Mapa.set_cell(tile.x,tile.y,0)
+	
 			
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
@@ -61,6 +48,7 @@ func _input(event):
 		else:
 			if crearMenu:
 				var aux = menu.instance();
+				var tileIndex = $Mapa.get_cellv(tile)
 				aux.rect_position = mouse_pos
 				theTile = tile
 				aux.connect("menu_activado",self,"elegirObjetoACrear")
