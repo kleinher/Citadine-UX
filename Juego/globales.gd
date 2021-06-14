@@ -35,4 +35,10 @@ func _ready():
 		save()
 	else:
 		load_config()
+	var audio = AudioStreamPlayer.new()
+	var song = load("res://resources/Background_tune.ogg")
+	song.set_loop(true)
+	audio.stream = song
+	audio.play()
+	add_child(audio)	
 	
