@@ -37,3 +37,7 @@ func _on_SelectionSound_finished():
 func _on_ConfigurarButton_pressed():
 	a_config = true
 	$SelectionSound.play()
+
+
+func _on_IniciarJuegoButton_pressed():
+	get_tree().change_scene("res://Mapa.tscn")
