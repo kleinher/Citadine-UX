@@ -6,7 +6,8 @@ var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
 	"contraste": 1,
-	"resolucion": 0,
+	"resolucion_x": 1080,
+	"resolucion_y": 720,
 }
 
 func save():

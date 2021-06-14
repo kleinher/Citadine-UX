@@ -8,8 +8,11 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	change_window_size(Vector2(Globales.config.resolucion_x, Globales.config.resolucion_y))
 
 
 func change_window_size(vector):
+	Globales.config.resolucion_x = vector.x
+	Globales.config.resolucion_y = vector.y
+	Globales.save()
 	OS.set_window_size(vector)
