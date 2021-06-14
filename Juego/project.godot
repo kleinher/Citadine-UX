@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 
 Globales="*res://globales.gd"
 ResolutionConfig="*res://ResolutionConfig.gd"
+TamanioLetrasConfig="*res://TamanioLetrasConfig.gd"
 
 [display]
 

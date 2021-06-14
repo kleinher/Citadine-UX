@@ -144,5 +144,8 @@ stream = ExtResource( 4 )
 margin_left = -245.0
 margin_right = -5.0
 
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/PequeñaButton" to="." method="_on_PequeaButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/MedianoButton" to="." method="_on_MedianoButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer3/GrandeButton" to="." method="_on_GrandeButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAAccesibilidadButton" to="." method="_on_VolverAAccesibilidadButton_pressed"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

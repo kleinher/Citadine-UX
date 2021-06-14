@@ -9,7 +9,7 @@ var a_accesibilidad = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_font_sizes()
 
 
 func _input(event):
@@ -47,3 +47,10 @@ func _on_ResolucionButton_pressed():
 func _on_AccesibilidadButton_pressed():
 	a_accesibilidad = true
 	$SelectionSound.play()
+	
+func set_font_sizes():
+	$VBoxContainer/VBoxContainer/ConfigurationTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
+	$VBoxContainer/VBoxContainer/CenterContainer/SonidoButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/ResolucionButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer3/AccesibilidadButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/VolverAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())

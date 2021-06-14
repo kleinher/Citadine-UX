@@ -5,7 +5,7 @@ var a_accesibilidad = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_font_sizes()
 
 func _input(event):
 	if event is InputEventKey:
@@ -27,3 +27,12 @@ func _on_VolverAAccesibilidadButton_pressed():
 
 func _on_SelectionSound_finished():
 	if a_accesibilidad: get_tree().change_scene("res://scenes/AccesibilidadScene.tscn")
+
+func set_font_sizes():
+	$VBoxContainer/VBoxContainer/ContrasteTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
+	$VBoxContainer/VBoxContainer/CenterContainer/AltoButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/MedioButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer3/BajoButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/VolverAAccesibilidadButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	

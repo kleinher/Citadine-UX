@@ -10,7 +10,7 @@ var small = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_font_sizes()
 
 
 func _input(event):
@@ -59,3 +59,11 @@ func _on_SelectionSound_finished():
 	elif small: 
 		ResolutionConfig.change_window_size(Vector2(800, 600))
 		small = false
+
+func set_font_sizes():
+	$VBoxContainer/VBoxContainer/ResolucionTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
+	$VBoxContainer/VBoxContainer/CenterContainer/BigButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/MediumButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer3/SmallButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/VolverAConfigButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())

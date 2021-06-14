@@ -6,7 +6,7 @@ var a_tamano_letras = false
 var a_contraste = false
 
 func _ready():
-	pass
+	set_font_sizes()
 
 func _input(event):
 	if event is InputEventKey:
@@ -41,3 +41,10 @@ func _on_ContrasteButton_pressed():
 func _on_VolverAConfigButton_pressed():
 	a_config = true
 	$SelectionSound.play()
+
+func set_font_sizes():
+	$VBoxContainer/VBoxContainer/AccesibilidadTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
+	$"VBoxContainer/VBoxContainer/CenterContainer/TamañoLetrasButton".get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/ContrasteButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/VolverAConfigButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
