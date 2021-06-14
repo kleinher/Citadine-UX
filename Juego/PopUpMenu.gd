@@ -19,4 +19,4 @@ func _ready():
 
 
 func _on_PopupMenu_id_pressed(id):
-	emit_signal("menu_activado",id);
+	emit_signal("menu_activado",id,false);

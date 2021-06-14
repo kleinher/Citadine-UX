@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Bar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/GUI/energy_bar_fill.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/energy_bar_bg.png" type="Texture" id=3]
+[ext_resource path="res://assets/GUI/label_EP.png" type="Texture" id=4]
+[ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+extra_spacing_bottom = 8
+font_data = ExtResource( 5 )
+
+[node name="EnergyBar" instance=ExtResource( 1 )]
+margin_right = 353.0
+margin_bottom = 40.0
+
+[node name="Bar" parent="." index="0"]
+margin_right = 353.0
+margin_bottom = 40.0
+
+[node name="Count" parent="Bar" index="0"]
+margin_bottom = 40.0
+custom_constants/margin_right = 20
+
+[node name="Background" parent="Bar/Count" index="0"]
+margin_right = 80.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 80, 40 )
+
+[node name="Number" parent="Bar/Count/Background" index="0"]
+anchor_left = 1.0
+margin_left = -46.0
+margin_right = 0.0
+custom_fonts/font = SubResource( 1 )
+text = "14"
+
+[node name="Title" parent="Bar/Count/Background" index="1"]
+margin_bottom = 39.0
+texture = ExtResource( 4 )
+
+[node name="Gauge" parent="Bar" index="1"]
+margin_right = 352.0
+margin_bottom = 40.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 2 )
