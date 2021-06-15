@@ -32,3 +32,7 @@ func _on_Mapa_tile_agregado(id):
 		1:
 			$HBoxContainer/Bars/ArbolCounter.incrementarValor()
 
+
+
+func _on_Timer2_timeout():
+	$HBoxContainer/Counters/LifeBar/Bar/Gauge.value-=4
