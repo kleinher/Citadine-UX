@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Mapa.tres" type="TileSet" id=1]
 [ext_resource path="res://Mapa.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://resources/sprites/posicion.png" type="Texture" id=5]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Juego.gd" type="Script" id=7]
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
@@ -61,5 +62,11 @@ script = ExtResource( 2 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 margin_right = 1078.0
+
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 8 )]
+margin_left = -1.28098
+margin_top = 716.696
+margin_right = 238.719
+margin_bottom = 716.696
 
 [connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
