@@ -1,13 +1,14 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Mapa.tres" type="TileSet" id=1]
-[ext_resource path="res://Mapa.gd" type="Script" id=2]
+[ext_resource path="res://resources/tileset/Mapa.tres" type="TileSet" id=1]
+[ext_resource path="res://scripts/Juego/Mapa.gd" type="Script" id=2]
 [ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Posicion.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Juego/Posicion.gd" type="Script" id=4]
 [ext_resource path="res://resources/sprites/posicion.png" type="Texture" id=5]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Juego.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Juego/GUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Juego/Juego.gd" type="Script" id=7]
 [ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=8]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 33

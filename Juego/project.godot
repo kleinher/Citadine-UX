@@ -20,9 +20,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Globales="*res://globales.gd"
-ResolutionConfig="*res://ResolutionConfig.gd"
-TamanioLetrasConfig="*res://TamanioLetrasConfig.gd"
+Globales="*res://scripts/globales.gd"
+ResolutionConfig="*res://scripts/ResolutionConfig.gd"
+TamanioLetrasConfig="*res://scripts/TamanioLetrasConfig.gd"
 
 [display]
 
