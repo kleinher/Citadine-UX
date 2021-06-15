@@ -127,7 +127,7 @@ margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 4 )
-text = "2. Volver a configuración"
+text = "4. Volver a configuración"
 __meta__ = {
 "_edit_use_anchors_": false
 }
