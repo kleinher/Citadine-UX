@@ -37,6 +37,9 @@ func _on_SelectionSound_finished():
 func _on_ConfigurarButton_pressed():
 	a_config = true
 	$SelectionSound.play()
+
+func _on_IniciarJuegoButton_pressed():
+	get_tree().change_scene("res://Mapa.tscn")
 	
 func set_font_sizes():
 	$VBoxContainer/VBoxContainer/MenuTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())

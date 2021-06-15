@@ -1,7 +1,6 @@
 extends Node
 
 const FILE_NAME = "user://config-data.json"
-
 var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
