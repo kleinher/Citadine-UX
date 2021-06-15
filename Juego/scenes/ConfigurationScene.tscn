@@ -129,7 +129,7 @@ margin_bottom = 459.0
 
 [node name="VolverAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
 margin_left = 62.0
-margin_right = 402.0
+margin_right = 394.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2

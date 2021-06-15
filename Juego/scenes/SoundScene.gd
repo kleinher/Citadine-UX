@@ -18,7 +18,6 @@ func _ready():
 #	pass
 func _input(event):
 	if event is InputEventKey:
-
 		if event.is_action_pressed("4_selection"):
 			a_menu_configuration = true
 			$SelectionSound.play()
