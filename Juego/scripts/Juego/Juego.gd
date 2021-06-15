@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var map = get_node("Mapa")
-var menu = preload("res://PopUpMenu.tscn")
+var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
 var crearMenu;
 var hayMenu = false;
 var theTile;
