@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 Globales="*res://scripts/globales.gd"
 ResolutionConfig="*res://scripts/ResolutionConfig.gd"
 TamanioLetrasConfig="*res://scripts/TamanioLetrasConfig.gd"
+SoundConfiguration="*res://scripts/SoundConfiguration.gd"
 
 [display]
 
