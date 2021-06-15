@@ -32,7 +32,7 @@ func _on_SelectionSound_finished():
 
 func _on_volumen_value_changed(value):	
 	print("Music changed. Level: %d" % value)
-	Globales.changeVolume(value)
+	SoundConfiguration.changeVolume(value)
 	
 
 
