@@ -34,7 +34,7 @@ func _on_SalirButton_button_up():
 func _on_SelectionSound_finished():
 	if saliendo: get_tree().quit()
 	elif a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
-	elif a_play: get_tree().change_scene("res://Mapa.tscn")
+	elif a_play: get_tree().change_scene("res://scenes/Juego/Mapa.tscn")
 
 
 func _on_ConfigurarButton_pressed():
@@ -42,7 +42,7 @@ func _on_ConfigurarButton_pressed():
 	$SelectionSound.play()
 
 func _on_IniciarJuegoButton_pressed():
-	a_config = true
+	a_play = true
 	$SelectionSound.play()
 	
 func set_font_sizes():
