@@ -5,6 +5,7 @@ extends Control
 var a_menu = false
 var a_resolucion = false
 var a_accesibilidad = false
+var a_sonido = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,8 +16,8 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 		if event.is_action_pressed("1_selection"):
-			#pass # TODO: Configuracion de sonido
-			get_tree().change_scene("res://scenes/SoudScene.tscn")
+			a_sonido = true
+			$SelectionSound.play()
 		elif event.is_action_pressed("2_selection"):
 			a_resolucion = true
 			$SelectionSound.play()
@@ -37,6 +38,7 @@ func _on_SelectionSound_finished():
 	if a_menu: get_tree().change_scene("res://scenes/MainMenu.tscn")
 	elif a_resolucion: get_tree().change_scene("res://scenes/ResolucionScene.tscn")
 	elif a_accesibilidad: get_tree().change_scene("res://scenes/AccesibilidadScene.tscn")
+	elif a_sonido: get_tree().change_scene("res://scenes/SoudScene.tscn")
 
 
 func _on_ResolucionButton_pressed():
@@ -54,3 +56,8 @@ func set_font_sizes():
 	$VBoxContainer/VBoxContainer/CenterContainer2/ResolucionButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$VBoxContainer/VBoxContainer/CenterContainer3/AccesibilidadButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$VBoxContainer/CenterContainer/VolverAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+
+
+func _on_SonidoButton_pressed():
+	a_sonido = true
+	$SelectionSound.play()

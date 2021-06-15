@@ -84,9 +84,10 @@ margin_right = 566.0
 margin_bottom = 166.0
 
 [node name="PequeñaButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 161.0
-margin_right = 404.0
+margin_left = 158.0
+margin_right = 408.0
 margin_bottom = 56.0
+rect_min_size = Vector2( 250, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
@@ -98,9 +99,10 @@ margin_right = 566.0
 margin_bottom = 247.0
 
 [node name="MedianoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 162.0
-margin_right = 403.0
+margin_left = 158.0
+margin_right = 408.0
 margin_bottom = 56.0
+rect_min_size = Vector2( 250, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
@@ -112,9 +114,10 @@ margin_right = 566.0
 margin_bottom = 328.0
 
 [node name="GrandeButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
-margin_left = 176.0
-margin_right = 390.0
+margin_left = 158.0
+margin_right = 408.0
 margin_bottom = 56.0
+rect_min_size = Vector2( 250, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
