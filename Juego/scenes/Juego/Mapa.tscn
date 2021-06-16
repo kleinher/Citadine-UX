@@ -13,6 +13,8 @@
 [ext_resource path="res://scenes/Juego/indicadorMouse.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Juego/NubeTimer.gd" type="Script" id=12]
 [ext_resource path="res://scenes/Juego/Calles.gd" type="Script" id=13]
+[ext_resource path="res://scenes/Juego/Feedback.gd" type="Script" id=14]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "roadTextures_tilesheet.png 0"
@@ -404,6 +406,9 @@ script = ExtResource( 12 )
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="Feedback" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 14 )
 
 [connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
 [connection signal="timeout" from="NubeTimer" to="NubeTimer" method="_on_NubeTimer_timeout"]

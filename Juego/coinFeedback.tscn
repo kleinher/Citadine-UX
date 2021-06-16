@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://positivo.png" type="Texture" id=1]
+[ext_resource path="res://coinFeedback.gd" type="Script" id=2]
+
+[node name="CoinFeedback" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="positivo" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 21.4047, 15.3675 )
+scale = Vector2( 1.21574, 1.23597 )
+texture = ExtResource( 1 )

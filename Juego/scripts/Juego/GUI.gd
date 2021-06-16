@@ -11,7 +11,7 @@ var count_basurero = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("tile_agregado",self,"actualizarContador")
-	
+	$HBoxContainer/Bars/CasaCounter.contador = 10
 func actualizarContador(id):
 	print("Entro")
 	match id:
@@ -30,7 +30,7 @@ func _on_Mapa_tile_agregado(id):
 		0:
 			$HBoxContainer/Bars/CasaCounter.incrementarValor()
 		1:
-			$HBoxContainer/Bars/ArbolCounter.incrementarValor()
+			$HBoxContainer/Bars/ArbolCounter.decrementarValor()
 
 
 
