@@ -3,12 +3,6 @@ extends MarginContainer
 var count_casa = 0
 var count_arbol = 0
 var count_basurero = 0
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("tile_agregado",self,"actualizarContador")
 	$HBoxContainer/Bars/CasaCounter.contador = 10
@@ -22,17 +16,11 @@ func actualizarContador(id):
 			count_casa+=1
 		2:
 			count_basurero+=1
-		
-
-
 func _on_Mapa_tile_agregado(id):
 	match id:
 		0:
 			$HBoxContainer/Bars/CasaCounter.incrementarValor()
 		1:
 			$HBoxContainer/Bars/ArbolCounter.decrementarValor()
-
-
-
 func _on_Timer2_timeout():
 	$HBoxContainer/Counters/LifeBar/Bar/Gauge.value-=4
