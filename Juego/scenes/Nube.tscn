@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Nube.gd" type="Script" id=1]
+[ext_resource path="res://resources/sprites/cloud8.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="cloud8" type="Sprite" parent="."]
+position = Vector2( 255.149, 152.009 )
+texture = ExtResource( 2 )
