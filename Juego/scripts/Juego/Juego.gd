@@ -6,7 +6,7 @@ var currentTile = Vector2(10, 10)
 
 func _ready():
 	$NubeTimer._on_NubeTimer_timeout()
-
+	
 func _input(event):
 	#Pintar otro color
 	

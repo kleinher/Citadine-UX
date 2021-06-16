@@ -26,7 +26,7 @@ func createAudioStreamPlayer():
 	var song = load("res://resources/Background_tune.ogg")
 	song.set_loop(true)
 	audio.stream = song
-	audio.play()
+	#audio.play()
 	add_child(audio)	
 	
 func changeVolume(value):
