@@ -37,8 +37,8 @@ func _input(event):
 		_:
 			$SelectionTool.normal()
 	#Pinto la posición determinada
-	$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(currentTile)
 	
+	$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(currentTile)
 	if event.is_action_pressed("mouse_lclick") or event.is_action_pressed("ui_accept"):
 		elegirObjetoACrear($Mapa.get_cellv(currentTile)) #Pongo un árbol en la posición
 
@@ -46,7 +46,8 @@ func elegirObjetoACrear(id):
 	match id:
 		0:
 			$Mapa.set_cell(currentTile.x,currentTile.y,1)
-		_:
-			$Mapa.set_cell(currentTile.x,currentTile.y,id)
-	
+			var currentTilePosition = $Mapa.map_to_world(currentTile)
+			var test = $Mapa.to_global(currentTilePosition)
+			$Feedback.coinFeedback(currentTile,test)
+		
 

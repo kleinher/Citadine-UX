@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://resources/tileset/Mapa.tres" type="TileSet" id=1]
 [ext_resource path="res://scripts/Juego/Mapa.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://resources/kenny/spritesheet_default.png" type="Texture" id=10]
 [ext_resource path="res://scenes/Juego/indicadorMouse.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Juego/NubeTimer.gd" type="Script" id=12]
+[ext_resource path="res://scenes/Juego/Feedback.gd" type="Script" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "roadTextures_tilesheet.png 0"
@@ -387,7 +388,6 @@ texture = ExtResource( 5 )
 offset = Vector2( 32, 32 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
-visible = false
 margin_right = 1073.0
 
 [node name="IrAlMenuScene" parent="." instance=ExtResource( 8 )]
@@ -404,6 +404,9 @@ script = ExtResource( 12 )
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="Feedback" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 13 )
 
 [connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
 [connection signal="timeout" from="NubeTimer" to="NubeTimer" method="_on_NubeTimer_timeout"]
