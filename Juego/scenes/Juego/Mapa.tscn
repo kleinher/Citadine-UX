@@ -397,7 +397,7 @@ margin_right = 240.381
 margin_bottom = 917.488
 
 [node name="NubeTimer" type="Timer" parent="."]
-one_shot = true
+wait_time = 10.0
 autostart = true
 script = ExtResource( 12 )
 
