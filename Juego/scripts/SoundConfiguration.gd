@@ -27,7 +27,9 @@ func createAudioStreamPlayer():
 	song.set_loop(true)
 	audio.stream = song
 	#audio.play()
-	add_child(audio)	
+	add_child(audio)
+	audio.volume_db=Globales.config.sonido	
+	changeVolume(audio.volume_db)
 	
 func changeVolume(value):
 	print("Music changed. Level: %d" % value)
@@ -51,3 +53,6 @@ func _music(action):
 		music_position = audio.get_playback_position()
 		audio.stop()
 		print("Music stopped")
+	
+	Globales.config.sonido=audio.volume_db	
+	Globales.save()
