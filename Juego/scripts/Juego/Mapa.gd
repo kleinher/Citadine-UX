@@ -9,20 +9,20 @@ var level_codes = {
  }
 
 var level_1 = [
-	"nnnnnnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnncncnnnnnnnnnnnnaaaaaaa",
-	"nnttnnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnnnnnnnnnnnncnnnnaaaaaaa",
-	"nnnnnnnnnnnnntnnnnnnnaaaaaaa",
-	"nnncnnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnnnnntnnnnnnnnnnnaaaaaaa",
-	"nnnncnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnnnnnnnncncnnnnnnaaaaaaa",
-	"nnnttnnnnnnnnnnnnnnnnaaaaaaa",
-	"nncnnnnnnnnnnnncncnnnaaaaaaa",
-	"nnnnnnnnnnnnnnnnnnnnnaaaaaaa",
-	"nnnnnnnnttnnnnnnnnnnnaaaaaaa",
+	"nnnnnnnnnnnnnnnnnnnnn",
+	"nnnnnnnnnnnnnnnnnnnnn",
+	"nnnnnncncnnnnnnnnnnnn",
+	"nnttnnnnnnnnnnnnnnnnn",
+	"nnnnnnnnnnnnnnnncnnnn",
+	"nnnnnnnnnnnnntnnnnnnn",
+	"nnncnnnnnnnnnnnnnnnnn",
+	"nnnnnnnnntnnnnnnnnnnn",
+	"nnnncnnnnnnnnnnnnnnnn",
+	"nnnnnnnnnnnncncnnnnnn",
+	"nnnttnnnnnnnnnnnnnnnn",
+	"nncnnnnnnnnnnnncncnnn",
+	"nnnnnnnnnnnnnnnnnnnnn",
+	"nnnnnnnnttnnnnnnnnnnn",
 ]	
 	
 func set_cell(x, y, tile, flip_x=false, flip_y=false, transpose=false, autotile_coord=Vector2()):

@@ -3,6 +3,8 @@ extends Node2D
 onready var map = get_node("Mapa")
 var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
 var currentTile = Vector2(10, 10)
+const MAX_Y = 13
+const MAX_X = 20
 
 func _ready():
 	$NubeTimer._on_NubeTimer_timeout()
@@ -15,13 +17,13 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN) #escondo el mouse
 		#Determino la posición actual con el teclado
 		if event.is_action_pressed("ui_right"):
-			currentTile = Vector2(currentTile.x + 1, currentTile.y)
+			if currentTile.x < MAX_X: currentTile = Vector2(currentTile.x + 1, currentTile.y)
 		if event.is_action_pressed("ui_left"):
-			currentTile = Vector2(currentTile.x - 1, currentTile.y)
+			if currentTile.x > 0: currentTile = Vector2(currentTile.x - 1, currentTile.y)
 		if event.is_action_pressed("ui_down"):
-			currentTile = Vector2(currentTile.x, currentTile.y + 1)
+			if currentTile.y < MAX_Y: currentTile = Vector2(currentTile.x, currentTile.y + 1)
 		if event.is_action_pressed("ui_up"):
-			currentTile = Vector2(currentTile.x, currentTile.y - 1)
+			if currentTile.y > 0: currentTile = Vector2(currentTile.x, currentTile.y - 1)
 		if event.is_action("arreglar"):
 			elegirObjetoACrear($Mapa.get_cellv(currentTile))
 	else:

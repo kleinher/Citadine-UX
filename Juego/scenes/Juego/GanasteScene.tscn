@@ -1,0 +1,167 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=3]
+[ext_resource path="res://resources/ciudad_soleada.jpg" type="Texture" id=4]
+[ext_resource path="res://scripts/Juego/GanasteScene.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 1 )
+
+[node name="GanasteScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1675.0
+margin_top = -32.9899
+margin_right = 1062.0
+margin_bottom = 794.01
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor2" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.827451 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -560.0
+margin_top = 100.0
+margin_right = 560.0
+margin_bottom = 550.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -530.0
+margin_top = 10.0
+margin_right = 530.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -540.0
+margin_top = 20.0
+margin_right = 540.0
+margin_bottom = 377.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 399.0
+custom_constants/separation = 30
+
+[node name="GanasteTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "¡Genial, la lluvia fue fuerte pero la ciudad no se inundó!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DatosLabel" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_top = 80.0
+margin_right = 1080.0
+margin_bottom = 399.0
+custom_fonts/font = SubResource( 3 )
+text = "Plantaste 24 árboles, gracias a esto el agua pudo filtrarse a la tierra sin acumularse.
+
+Limpiaste 5 bocacalles, por eso el agua no se juntó en las calles.
+
+Levantaste 7 bolsas de basura, en consecuencia el agua pudo circular correctamente por el canal."
+autowrap = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 429.0
+margin_right = 1080.0
+margin_bottom = 485.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer2"]
+margin_left = 142.0
+margin_right = 937.0
+margin_bottom = 56.0
+rect_pivot_offset = Vector2( -556.351, -190.203 )
+custom_constants/separation = 150
+
+[node name="IrAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 320.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "1. Ir al menú"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SiguienteNivelButton" type="Button" parent="VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_left = 470.0
+margin_right = 795.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "2. Siguiente nivel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 515.0
+margin_right = 1080.0
+margin_bottom = 571.0
+
+[node name="SalirButton" type="Button" parent="VBoxContainer/CenterContainer"]
+margin_left = 380.0
+margin_right = 700.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "4. Salir del juego"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/HBoxContainer/IrAlMenuButton" to="." method="_on_IrAlMenuButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/HBoxContainer/SiguienteNivelButton" to="." method="_on_SiguienteNivelButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/SalirButton" to="." method="_on_SalirButton_pressed"]
+[connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]
