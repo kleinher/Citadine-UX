@@ -7,7 +7,7 @@ func _ready():
 
 
 func get_level():
-	return Globales.config.nivel
+	return 1
 
 func next_level():
 	Globales.config.nivel += 1

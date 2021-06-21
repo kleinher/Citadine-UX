@@ -403,10 +403,6 @@ wait_time = 10.0
 autostart = true
 script = ExtResource( 12 )
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
 [node name="Feedback" type="Node2D" parent="."]
 script = ExtResource( 14 )
 
@@ -415,4 +411,3 @@ stream = ExtResource( 15 )
 
 [connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
 [connection signal="timeout" from="NubeTimer" to="NubeTimer" method="_on_NubeTimer_timeout"]
-[connection signal="timeout" from="Timer2" to="GUI" method="_on_Timer2_timeout"]
