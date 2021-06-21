@@ -390,7 +390,10 @@ texture = ExtResource( 5 )
 offset = Vector2( 32, 32 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
-margin_right = 1073.0
+margin_left = -2.0
+margin_right = 1916.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="IrAlMenuScene" parent="." instance=ExtResource( 8 )]
 margin_left = 0.38046
