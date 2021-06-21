@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://assets/GUI/ezgif.com-gif-maker(1).png" type="Texture" id=2]
+[ext_resource path="res://scenes/Dialogo.gd" type="Script" id=3]
 
 [sub_resource type="Theme" id=1]
 
@@ -140,6 +141,7 @@ margin_bottom = 298.0
 rect_min_size = Vector2( 397, 235.946 )
 theme = SubResource( 1 )
 window_title = "Tutorial"
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
