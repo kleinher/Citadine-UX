@@ -1,0 +1,220 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://assets/GUI/ezgif.com-gif-maker(1).png" type="Texture" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="TileSet" id=2]
+0/name = "ezgif.com-gif-maker(1).png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 864, 264, 48, 56 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "ezgif.com-gif-maker(1).png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 798, 330, 48, 57 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "ezgif.com-gif-maker(1).png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 1023, 216, 90, 168 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "ezgif.com-gif-maker(1).png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 933, 333, 45, 54 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "ezgif.com-gif-maker(1).png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 867, 333, 45, 54 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "ezgif.com-gif-maker(1).png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 2223, 216, 90, 168 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "ezgif.com-gif-maker(1).png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 198, 333, 48, 54 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "ezgif.com-gif-maker(1).png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 50, 55 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[node name="Tutorial" type="Control"]
+anchor_right = 0.382
+anchor_bottom = 0.428
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -3.56003
+margin_bottom = 1.83997
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo" type="AcceptDialog" parent="."]
+visible = true
+self_modulate = Color( 0, 0.623529, 0.462745, 1 )
+margin_top = 19.0
+margin_right = 405.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 397, 235.946 )
+theme = SubResource( 1 )
+window_title = "Tutorial"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Dialogo"]
+anchor_left = -0.012
+anchor_top = -0.596
+anchor_right = 0.04
+anchor_bottom = -0.034
+margin_left = 12.86
+margin_top = 174.284
+margin_right = 380.8
+margin_bottom = 252.486
+size_flags_horizontal = 5
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="Dialogo/Control"]
+position = Vector2( -7.55099, -26.9004 )
+scale = Vector2( 0.4, 0.4 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 50, 55 )
+format = 1
+tile_data = PoolIntArray( 65544, 0, 0, 131079, 1, 0, 131080, 4, 0, 131081, 3, 0, 262152, 6, 0, 458758, 2, 0, 458767, 5, 0 )
+
+[node name="Flechas" type="Label" parent="Dialogo/Control"]
+margin_left = 26.9779
+margin_top = 20.6017
+margin_right = 374.978
+margin_bottom = 34.6017
+text = "Usa las flechas 	                     para moverte por el mapa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accion" type="Label" parent="Dialogo/Control"]
+margin_left = 68.788
+margin_top = 64.4059
+margin_right = 329.788
+margin_bottom = 78.4059
+text = "Usa la tecla         para arreglar problemas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse_mover" type="Label" parent="Dialogo/Control"]
+margin_left = 7.0
+margin_top = 142.0
+margin_right = 100.0
+margin_bottom = 173.0
+text = "Usa el mouse
+ para moverte "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse_seleccionar" type="Label" parent="Dialogo/Control"]
+margin_left = 167.931
+margin_top = 142.472
+margin_right = 291.931
+margin_bottom = 173.472
+text = "Y el click izquierdo 
+para seleecionar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Dialogo/Control"]
+margin_left = 158.571
+margin_top = 96.7471
+margin_right = 166.571
+margin_bottom = 110.747
+text = "ó"
+__meta__ = {
+"_edit_use_anchors_": false
+}

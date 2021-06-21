@@ -10,6 +10,10 @@
 value = 100.0
 script = ExtResource( 2 )
 
-[node name="Tiempo" parent="Bar/Gauge" index="0" instance=ExtResource( 3 )]
+[node name="Tiempo_sonido_reloj" parent="Bar/Gauge" index="0" instance=ExtResource( 3 )]
 
-[connection signal="poco_tiempo" from="Bar/Gauge" to="Bar/Gauge/Tiempo" method="_on_Gauge_poco_tiempo"]
+[node name="Tiempo_decrementar_barra" type="Timer" parent="Bar/Gauge" index="1"]
+autostart = true
+
+[connection signal="poco_tiempo" from="Bar/Gauge" to="Bar/Gauge/Tiempo_sonido_reloj" method="_on_Gauge_poco_tiempo"]
+[connection signal="timeout" from="Bar/Gauge/Tiempo_decrementar_barra" to="Bar/Gauge" method="_on_Tiempo_decrementar_barra_timeout"]
