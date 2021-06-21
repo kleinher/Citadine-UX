@@ -7,6 +7,8 @@ const MAX_Y = 13
 const MAX_X = 20
 
 func _ready():
+	var tuto = load("res://scenes/Tutorial.tscn").instance()
+	add_child(tuto)
 	$NubeTimer._on_NubeTimer_timeout()
 	
 func _input(event):
