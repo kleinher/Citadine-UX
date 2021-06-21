@@ -120,70 +120,54 @@
 7/z_index = 0
 
 [node name="Tutorial" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.823
-margin_top = 26.9004
-margin_right = 20.823
-margin_bottom = 26.9004
+anchor_right = 0.382
+anchor_bottom = 0.428
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -3.56003
+margin_bottom = 1.83997
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-margin_left = 51.6916
-margin_top = 74.9154
-margin_right = 647.692
-margin_bottom = 407.915
-rect_min_size = Vector2( 100, 100 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Dialogo" type="AcceptDialog" parent="CenterContainer"]
+[node name="Dialogo" type="AcceptDialog" parent="."]
 visible = true
 self_modulate = Color( 0, 0.623529, 0.462745, 1 )
-margin_left = 250.0
-margin_top = 137.0
-margin_right = 346.0
-margin_bottom = 195.0
+margin_top = 19.0
+margin_right = 405.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 397, 235.946 )
 theme = SubResource( 1 )
 window_title = "Tutorial"
-resizable = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Dialogo"]
-margin_left = -36.8985
-margin_top = -21.184
-margin_right = 43.1015
-margin_bottom = -7.18401
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Control" type="Control" parent="CenterContainer/Dialogo/CenterContainer"]
-margin_left = 40.0
-margin_top = 7.0
-margin_right = 40.0
-margin_bottom = 7.0
-size_flags_horizontal = 4
+[node name="Control" type="Control" parent="Dialogo"]
+anchor_left = -0.012
+anchor_top = -0.596
+anchor_right = 0.04
+anchor_bottom = -0.034
+margin_left = 12.86
+margin_top = 174.284
+margin_right = 380.8
+margin_bottom = 252.486
+size_flags_horizontal = 5
 size_flags_vertical = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TileMap" type="TileMap" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="TileMap" type="TileMap" parent="Dialogo/Control"]
 position = Vector2( -7.55099, -26.9004 )
 scale = Vector2( 0.4, 0.4 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 50, 55 )
 format = 1
-tile_data = PoolIntArray( 65544, 0, 0, 196605, 5, 0, 131079, 1, 0, 131080, 4, 0, 131081, 3, 0, 262152, 6, 0, 458758, 2, 0, 458767, 5, 0 )
+tile_data = PoolIntArray( 65544, 0, 0, 131079, 1, 0, 131080, 4, 0, 131081, 3, 0, 262152, 6, 0, 458758, 2, 0, 458767, 5, 0 )
 
-[node name="Flechas" type="Label" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="Flechas" type="Label" parent="Dialogo/Control"]
 margin_left = 26.9779
 margin_top = 20.6017
 margin_right = 374.978
@@ -193,7 +177,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Accion" type="Label" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="Accion" type="Label" parent="Dialogo/Control"]
 margin_left = 68.788
 margin_top = 64.4059
 margin_right = 329.788
@@ -203,7 +187,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Mouse_mover" type="Label" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="Mouse_mover" type="Label" parent="Dialogo/Control"]
 margin_left = 7.0
 margin_top = 142.0
 margin_right = 100.0
@@ -214,7 +198,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Mouse_seleccionar" type="Label" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="Mouse_seleccionar" type="Label" parent="Dialogo/Control"]
 margin_left = 167.931
 margin_top = 142.472
 margin_right = 291.931
@@ -225,7 +209,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CenterContainer/Dialogo/CenterContainer/Control"]
+[node name="Label" type="Label" parent="Dialogo/Control"]
 margin_left = 158.571
 margin_top = 96.7471
 margin_right = 166.571
