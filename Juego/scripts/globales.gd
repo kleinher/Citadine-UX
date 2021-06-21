@@ -8,6 +8,7 @@ var config = {
 	"resolucion_x": 1080,
 	"resolucion_y": 720,
 	"nivel": 1,
+	"dificultad": 0,
 }
 
 func save():

@@ -40,32 +40,23 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -268.0
 margin_right = 268.0
-margin_bottom = 428.0
+margin_bottom = 450.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -157.0
-margin_top = 20.0
-margin_right = 143.0
-margin_bottom = 398.0
-custom_constants/separation = 75
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 320.0
-margin_bottom = 247.0
+margin_left = -160.0
+margin_right = 160.0
+margin_bottom = 409.0
 custom_constants/separation = 25
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+[node name="MenuTitle" type="Label" parent="VBoxContainer2"]
 margin_right = 320.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
@@ -76,12 +67,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer2"]
 margin_top = 110.0
 margin_right = 320.0
 margin_bottom = 166.0
 
-[node name="IniciarJuegoButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
+[node name="IniciarJuegoButton" type="Button" parent="VBoxContainer2/CenterContainer"]
 margin_right = 320.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 320, 0 )
@@ -91,12 +82,12 @@ custom_fonts/font = SubResource( 2 )
 text = "1. Iniciar juego"
 align = 0
 
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer2"]
 margin_top = 191.0
 margin_right = 320.0
 margin_bottom = 247.0
 
-[node name="ConfigurarButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+[node name="ConfigurarButton" type="Button" parent="VBoxContainer2/CenterContainer2"]
 margin_right = 320.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 320, 0 )
@@ -106,12 +97,30 @@ custom_fonts/font = SubResource( 2 )
 text = "2. Configurar"
 align = 0
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 322.0
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer2"]
+margin_top = 272.0
 margin_right = 320.0
-margin_bottom = 378.0
+margin_bottom = 328.0
 
-[node name="SalirButton" type="Button" parent="VBoxContainer/CenterContainer"]
+[node name="DificultadButton" type="Button" parent="VBoxContainer2/CenterContainer3"]
+margin_right = 320.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "3. Dificultad"
+align = 0
+
+[node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer2"]
+margin_top = 353.0
+margin_right = 320.0
+margin_bottom = 409.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SalirButton" type="Button" parent="VBoxContainer2/CenterContainer4"]
 margin_right = 320.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 320, 0 )
@@ -126,7 +135,8 @@ __meta__ = {
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/IniciarJuegoButton" to="." method="_on_IniciarJuegoButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ConfigurarButton" to="." method="_on_ConfigurarButton_pressed"]
-[connection signal="button_up" from="VBoxContainer/CenterContainer/SalirButton" to="." method="_on_SalirButton_button_up"]
+[connection signal="pressed" from="VBoxContainer2/CenterContainer/IniciarJuegoButton" to="." method="_on_IniciarJuegoButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/CenterContainer2/ConfigurarButton" to="." method="_on_ConfigurarButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/CenterContainer3/DificultadButton" to="." method="_on_DificultadButton_pressed"]
+[connection signal="button_up" from="VBoxContainer2/CenterContainer4/SalirButton" to="." method="_on_SalirButton_button_up"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

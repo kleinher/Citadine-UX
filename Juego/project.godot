@@ -25,6 +25,7 @@ ResolutionConfig="*res://scripts/ResolutionConfig.gd"
 TamanioLetrasConfig="*res://scripts/TamanioLetrasConfig.gd"
 SoundConfiguration="*res://scripts/SoundConfiguration.gd"
 NivelConfig="*res://scripts/NivelConfig.gd"
+DificultadConfig="*res://scripts/DificultadConfig.gd"
 
 [display]
 
