@@ -15,7 +15,7 @@ var level_codes = {
 	"k": 13, #interseccion + 2, vertical a este
 }
 
-var nivel_1 = [
+var level_1 = [
 	"ppppppppppappppppppppppppppp",
 	"ppppppppppappehhhhhspppppppp",
 	"ppppppppppappvpppppvpppppppp",
@@ -32,9 +32,14 @@ var nivel_1 = [
 	"ppppppppppappppppppppppppppp",
 ]
 
+var levels = [
+	level_1,
+]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in range(0,nivel_1.size()):
-		for j in range(0, nivel_1[i].length()):
-			set_cell(j, i, level_codes[nivel_1[i][j]])
+	var level = levels[NivelConfig.get_level() - 1]
+	for i in range(0,level.size()):
+		for j in range(0, level[i].length()):
+			set_cell(j, i, level_codes[level[i][j]])
 
