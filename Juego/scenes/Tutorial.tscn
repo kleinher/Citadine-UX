@@ -133,7 +133,6 @@ __meta__ = {
 }
 
 [node name="Dialogo" type="AcceptDialog" parent="."]
-visible = true
 self_modulate = Color( 0, 0.623529, 0.462745, 1 )
 margin_top = 19.0
 margin_right = 405.0
@@ -220,3 +219,6 @@ text = "ó"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="confirmed" from="Dialogo" to="Dialogo" method="_on_Dialogo_confirmed"]
+[connection signal="fin_pausa" from="Dialogo" to="." method="_on_Dialogo_fin_pausa"]

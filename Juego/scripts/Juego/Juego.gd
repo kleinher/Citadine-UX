@@ -7,8 +7,7 @@ const MAX_Y = 13
 const MAX_X = 20
 
 func _ready():
-	var tuto = load("res://scenes/Tutorial.tscn").instance()
-	add_child(tuto)
+	display_tutorial();
 	$NubeTimer._on_NubeTimer_timeout()
 	
 func _input(event):
@@ -55,3 +54,7 @@ func elegirObjetoACrear(id):
 			$Feedback.coinFeedback(currentTile,test)
 		
 
+func display_tutorial():
+	var tuto = load("res://scenes/Tutorial.tscn").instance()
+	add_child(tuto)
+	get_tree().paused = true

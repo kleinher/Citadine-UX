@@ -344,7 +344,7 @@
 size = 33
 font_data = ExtResource( 3 )
 
-[node name="Juego" type="Node2D"]
+[node name="Mapa" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Calles" type="TileMap" parent="."]
