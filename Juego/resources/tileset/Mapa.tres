@@ -4,7 +4,7 @@
 [ext_resource path="res://resources/tileset/Tileset-roto-placeholder.png" type="Texture" id=2]
 
 [resource]
-0/name = "spritesheet_default.png 0"
+0/name = "arbolmuerto 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -32,7 +32,7 @@
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-4/name = "spritesheet_default.png 4"
+4/name = "casaRoja"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
@@ -46,7 +46,7 @@
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
-5/name = "spritesheet_default.png 5"
+5/name = "arbol"
 5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 0.768627, 0.443137, 0.443137, 1 )
@@ -60,7 +60,7 @@
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
-6/name = "Tileset-roto-placeholder.png 6"
+6/name = "casaVerdeBasura"
 6/texture = ExtResource( 2 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
@@ -74,11 +74,11 @@
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
-7/name = "Tileset-roto-placeholder.png 7"
+7/name = "tocon"
 7/texture = ExtResource( 2 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 480, 234, 144, 168 )
+7/region = Rect2( 480, 270, 150, 140 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
 7/navigation_offset = Vector2( 0, 0 )
@@ -88,7 +88,7 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
-8/name = "spritesheet_default.png 8"
+8/name = "casaVerde"
 8/texture = ExtResource( 1 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )

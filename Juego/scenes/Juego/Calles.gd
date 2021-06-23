@@ -39,9 +39,9 @@ var levels = [
 ]
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	var level = levels[NivelConfig.get_level() - 1]
-	for i in range(0,level.size()):
-		for j in range(0, level[i].length()):
-			set_cell(j, i, level_codes[level[i][j]])
+#func _ready():#
+#	var level = levels[NivelConfig.get_level() - 1]
+#	for i in range(0,level.size()):
+#		for j in range(0, level[i].length()):
+#			set_cell(j, i, level_codes[level[i][j]])
 
