@@ -16,7 +16,6 @@ func save():
 	file.open(FILE_NAME, File.WRITE)
 	file.store_string(to_json(config))
 	file.close()
-
 func load_config():
 	var file = File.new()
 	if file.file_exists(FILE_NAME):
@@ -29,15 +28,9 @@ func load_config():
 			printerr("Corrupted data!")
 	else:
 		printerr("No saved data!")
-
 func _ready():
 	var config_file = File.new()
 	if not config_file.file_exists(FILE_NAME):
 		save()
 	else:
 		load_config()
-
-
-
-	
-

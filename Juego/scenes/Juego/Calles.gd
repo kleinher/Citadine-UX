@@ -7,12 +7,14 @@ var level_codes = {
 	"e": 2, #east (giro a arriba a la derecha desde posicion vertical)
 	"t": 4, #south + 1 (giro a abajo a la derecha desde posición vertical)
 	"f": 5, #east + 1 (giro a arriba a la derecha desde posición horizonatal)
+	"#": 28, #codo abajo derecha sucio
 	"h": 1, #horizontal
 	"v": 0, #vertical
 	"b": 9, #bridge
 	"i": 7, #interseccion norte a horizontal
 	"j": 12, #interseccion + 1, oeste a vertical
 	"k": 13, #interseccion + 2, vertical a este
+	
 }
 
 var level_1 = [
@@ -28,7 +30,7 @@ var level_1 = [
 	"vpppppppppapppppppppvppppppp",
 	"vpppppppppapppppppppvppppppp",
 	"vpppppppppapppppppppvppppppp",
-	"thhhhhhhhhbhhhhhhhhhfppppppp",
+	"thhhhhhhhhbhhhhhhhhh#ppppppp",
 	"ppppppppppappppppppppppppppp",
 ]
 

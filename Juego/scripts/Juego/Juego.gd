@@ -5,7 +5,11 @@ var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
 var currentTile = Vector2(10, 10)
 const MAX_Y = 13
 const MAX_X = 20
-
+var tiles = {"tocon":7,
+			"arbol":5,
+			"casaBasura":6,
+			"casa":8
+				}
 func _ready():
 	display_tutorial();
 	$NubeTimer._on_NubeTimer_timeout()
@@ -47,13 +51,17 @@ func _input(event):
 
 func elegirObjetoACrear(id):
 	match id:
-		0:
-			$Mapa.set_cell(currentTile.x,currentTile.y,1)
-			var currentTilePosition = $Mapa.map_to_world(currentTile)
-			var test = $Mapa.to_global(currentTilePosition)
-			$Feedback.coinFeedback(currentTile,test)
-		
-
+		tiles.tocon:
+			arreglarTile(tiles.arbol)
+		tiles.casaBasura:
+			arreglarTile(tiles.casa)
+			
+func arreglarTile(tile):
+	$Mapa.set_cell(currentTile.x,currentTile.y,tile)
+	var currentTilePosition = $Mapa.map_to_world(currentTile)
+	var test = $Mapa.to_global(currentTilePosition)
+	$Feedback.coinFeedback(currentTile,test)
+			
 func display_tutorial():
 	var tuto = load("res://scenes/Tutorial.tscn").instance()
 	add_child(tuto)

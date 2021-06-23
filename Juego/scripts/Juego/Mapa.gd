@@ -3,24 +3,26 @@ signal tile_agregado;
 
 var level_codes = {
 	"n": -1, #nada
-	"a": 1, #arbol
-	"c": 4, #casa
-	"t": 0, #tocon
+	"a": 5, #arbol
+	"c": 8, #casa
+	"t": 7, #tocon
+	"b": 6, #casa con basura
+	
  }
 
 var level_1 = [
 	"nnnnnnnnnnnnnnnnnnnnn",
 	"nnnnnnnnnnnnnnnnnnnnn",
-	"nnnnnncncnnnnnnnnnnnn",
+	"nnnnnnbnbnnnnnnnnnnnn",
 	"nnttnnnnnnnnnnnnnnnnn",
 	"nnnnnnnnnnnnnnnncnnnn",
-	"nnnnnnnnnnnnntnnnnnnn",
+	"nnnnnnnnnnnnnnnnnnnnn",
 	"nnncnnnnnnnnnnnnnnnnn",
 	"nnnnnnnnntnnnnnnnnnnn",
 	"nnnncnnnnnnnnnnnnnnnn",
-	"nnnnnnnnnnnncncnnnnnn",
+	"nnnnnnnnnnnnbncnnnnnn",
 	"nnnttnnnnnnnnnnnnnnnn",
-	"nncnnnnnnnnnnnncncnnn",
+	"nncnnnnnnnnnnnnbncnnn",
 	"nnnnnnnnnnnnnnnnnnnnn",
 	"nnnnnnnnttnnnnnnnnnnn",
 ]	
