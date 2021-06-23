@@ -51,6 +51,7 @@ func _music(action):
 		print("Music changed")
 	else:
 		music_position = audio.get_playback_position()
+		audio.volume_db= min_vol
 		audio.stop()
 		print("Music stopped")
 	
