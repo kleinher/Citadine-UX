@@ -139,6 +139,7 @@ margin_right = 405.0
 margin_bottom = 298.0
 rect_min_size = Vector2( 397, 235.946 )
 theme = SubResource( 1 )
+popup_exclusive = true
 window_title = "Tutorial"
 script = ExtResource( 3 )
 __meta__ = {
