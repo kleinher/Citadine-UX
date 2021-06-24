@@ -96,14 +96,14 @@ margin_top = 191.0
 margin_right = 474.0
 margin_bottom = 247.0
 
-[node name="ContrasteButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 117.0
-margin_right = 357.0
+[node name="VozButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+margin_left = 12.0
+margin_right = 462.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "2. Contraste"
+text = "2. Configuración de voz"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 397.0
@@ -127,6 +127,6 @@ stream = ExtResource( 4 )
 [node name="IrAlMenuScene" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/TamañoLetrasButton" to="." method="_on_TamaoLetrasButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/ContrasteButton" to="." method="_on_ContrasteButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/VozButton" to="." method="_on_VozButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/VolverAConfigButton" to="." method="_on_VolverAConfigButton_pressed"]
 [connection signal="finished" from="SelectionSound" to="." method="_on_SelectionSound_finished"]

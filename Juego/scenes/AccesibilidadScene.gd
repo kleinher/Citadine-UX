@@ -3,7 +3,7 @@ extends Control
 
 var a_config = false
 var a_tamano_letras = false
-var a_contraste = false
+var a_voz = false
 
 func _ready():
 	set_font_sizes()
@@ -14,7 +14,7 @@ func _input(event):
 			a_tamano_letras = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("2_selection"):
-			a_contraste = true
+			a_voz = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("4_selection"):
 			a_config = true
@@ -25,7 +25,7 @@ func _input(event):
 func _on_SelectionSound_finished():
 	if a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
 	if a_tamano_letras: get_tree().change_scene("res://scenes/TamañoLetrasScene.tscn")
-	if a_contraste: get_tree().change_scene("res://scenes/ContrasteScene.tscn")
+	if a_voz: get_tree().change_scene("res://scenes/VozScene.tscn")
 
 
 func _on_TamaoLetrasButton_pressed():
@@ -33,8 +33,8 @@ func _on_TamaoLetrasButton_pressed():
 	$SelectionSound.play()
 
 
-func _on_ContrasteButton_pressed():
-	a_contraste = true
+func _on_VozButton_pressed():
+	a_voz = true
 	$SelectionSound.play()
 
 
@@ -45,6 +45,7 @@ func _on_VolverAConfigButton_pressed():
 func set_font_sizes():
 	$VBoxContainer/VBoxContainer/AccesibilidadTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
 	$"VBoxContainer/VBoxContainer/CenterContainer/TamañoLetrasButton".get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
-	$VBoxContainer/VBoxContainer/CenterContainer2/ContrasteButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/VBoxContainer/CenterContainer2/VozButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$VBoxContainer/CenterContainer/VolverAConfigButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+
