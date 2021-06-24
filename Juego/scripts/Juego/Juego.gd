@@ -6,10 +6,10 @@ var currentTile = Vector2(10, 10)
 const MAX_Y = 13
 const MAX_X = 20
 var tilesetMapa = preload("res://resources/tileset/Mapa.tres")
-var tilesMapa = {"tocon": tilesetMapa.find_tile_by_name("tocon"),
-				"arbol":tilesetMapa.find_tile_by_name("arbol"),
+var tilesMapa = {"tocon": 	tilesetMapa.find_tile_by_name("tocon"),
+				"arbol":	tilesetMapa.find_tile_by_name("arbol"),
 				"casaBasura":tilesetMapa.find_tile_by_name("casaVerdeBasura"),
-				"casa":tilesetMapa.find_tile_by_name("casaVerde")
+				"casa":		tilesetMapa.find_tile_by_name("casaVerde")
 				}
 var tilesCalles = {
 				

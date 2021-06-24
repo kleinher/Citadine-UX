@@ -12,15 +12,15 @@
 size = 72
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxLine" id=4]
+[sub_resource type="StyleBoxLine" id=3]
 color = Color( 1, 1, 1, 1 )
 thickness = 10
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 42
 font_data = ExtResource( 3 )
 
@@ -99,7 +99,7 @@ __meta__ = {
 [node name="VelocidadLabel" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
 margin_right = 135.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Velocidad"
 align = 1
 
@@ -110,7 +110,7 @@ margin_right = 566.0
 margin_bottom = 26.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_styles/slider = SubResource( 4 )
+custom_styles/slider = SubResource( 3 )
 min_value = -24.0
 max_value = 0.0
 
@@ -127,7 +127,7 @@ __meta__ = {
 [node name="VolumenLabel" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 121.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Volumen"
 align = 1
 
@@ -138,7 +138,7 @@ margin_right = 566.0
 margin_bottom = 26.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_styles/slider = SubResource( 4 )
+custom_styles/slider = SubResource( 3 )
 min_value = -24.0
 max_value = 0.0
 
@@ -153,7 +153,7 @@ margin_right = 514.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "4. Volver a accesibilidad"
 __meta__ = {
 "_edit_use_anchors_": false
