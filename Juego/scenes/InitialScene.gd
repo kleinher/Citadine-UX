@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$"/root/VoiceConfiguration".play_voice("res://resources/voices/InitialScene/initial_scene_voice.ogg")
 	
 func _input(event):
 	if event is InputEventKey and event.pressed:

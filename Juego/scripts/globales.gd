@@ -4,6 +4,7 @@ const FILE_NAME = "user://config-data.json"
 var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
+	"volumen_voz": 1,
 	"contraste": 1,
 	"resolucion_x": 1080,
 	"resolucion_y": 720,
@@ -16,6 +17,7 @@ func save():
 	file.open(FILE_NAME, File.WRITE)
 	file.store_string(to_json(config))
 	file.close()
+	
 func load_config():
 	var file = File.new()
 	if file.file_exists(FILE_NAME):
@@ -28,6 +30,7 @@ func load_config():
 			printerr("Corrupted data!")
 	else:
 		printerr("No saved data!")
+		
 func _ready():
 	var config_file = File.new()
 	if not config_file.file_exists(FILE_NAME):
