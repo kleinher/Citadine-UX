@@ -32,6 +32,7 @@ func set_font_sizes():
 	$VBoxContainer/VBoxContainer/VozTitle.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_titulo_size())
 	$VBoxContainer/VBoxContainer/HBoxContainer/VelocidadLabel.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$VBoxContainer/VBoxContainer/HBoxContainer2/VolumenLabel.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
-	
+	$VBoxContainer/VBoxContainer/EncendidaCheck.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
+	$VBoxContainer/CenterContainer/VolverAAccesibilidadButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	
