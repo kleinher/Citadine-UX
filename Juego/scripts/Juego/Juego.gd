@@ -2,6 +2,7 @@ extends Node2D
 
 onready var map = get_node("Mapa")
 var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
+
 var currentTile = Vector2(10, 10)
 const MAX_Y = 13
 const MAX_X = 20
@@ -26,6 +27,7 @@ var tilesCalles = {
 func _ready():
 	display_tutorial();
 	$NubeTimer._on_NubeTimer_timeout()
+	connect("tiempo_finalizado",self,"tiempoFinalizado")
 	
 func _input(event):
 	#Pintar otro color
@@ -90,3 +92,7 @@ func display_tutorial():
 	var tuto = load("res://scenes/Tutorial.tscn").instance()
 	add_child(tuto)
 	get_tree().paused = true
+
+func tiempoFinalizado():
+	
+	get_parent().calcularResultado();

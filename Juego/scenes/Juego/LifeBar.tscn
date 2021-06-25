@@ -13,6 +13,7 @@ script = ExtResource( 2 )
 [node name="Tiempo_sonido_reloj" parent="Bar/Gauge" index="0" instance=ExtResource( 3 )]
 
 [node name="Tiempo_decrementar_barra" type="Timer" parent="Bar/Gauge" index="1"]
+wait_time = 0.3
 autostart = true
 
 [connection signal="poco_tiempo" from="Bar/Gauge" to="Bar/Gauge/Tiempo_sonido_reloj" method="_on_Gauge_poco_tiempo"]

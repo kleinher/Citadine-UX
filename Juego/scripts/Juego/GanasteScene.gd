@@ -5,6 +5,7 @@ var salir_del_juego = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	set_font_sizes()
 
 
@@ -45,7 +46,7 @@ func _on_SalirButton_pressed():
 	$SelectionSound.play()
 	
 func _on_SiguienteNivelButton_pressed():
-	pass # Replace with function body.
+	get_parent().changeLevel()
 
 func _on_SelectionSound_finished():
 	if a_menu: get_tree().change_scene("res://scenes/MainMenu.tscn")
