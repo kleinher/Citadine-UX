@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/800_600_selected.ogg-968c5f79ca3dda3693957048b281002e.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/Resolution/800_600_selected.ogg"
+dest_files=[ "res://.import/800_600_selected.ogg-968c5f79ca3dda3693957048b281002e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

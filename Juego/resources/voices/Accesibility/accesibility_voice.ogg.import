@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/accesibility_voice.ogg-68e4b57af4189c02077b2bd9bddafa46.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/Accesibility/accesibility_voice.ogg"
+dest_files=[ "res://.import/accesibility_voice.ogg-68e4b57af4189c02077b2bd9bddafa46.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

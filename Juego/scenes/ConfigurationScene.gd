@@ -11,6 +11,8 @@ var a_sonido = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_font_sizes()
+	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
+	scene_voice()
 
 
 func _input(event):
@@ -35,6 +37,7 @@ func _on_VolverAlMenuButton_pressed():
 
 
 func _on_SelectionSound_finished():
+	VoiceConfiguration.stop_voice()
 	if a_menu: get_tree().change_scene("res://scenes/MainMenu.tscn")
 	elif a_resolucion: get_tree().change_scene("res://scenes/ResolucionScene.tscn")
 	elif a_accesibilidad: get_tree().change_scene("res://scenes/AccesibilidadScene.tscn")
@@ -61,3 +64,6 @@ func set_font_sizes():
 func _on_SonidoButton_pressed():
 	a_sonido = true
 	$SelectionSound.play()
+
+func scene_voice():
+	$"/root/VoiceConfiguration".play_voice("res://resources/voices/Configuration/configuration_voice.ogg")

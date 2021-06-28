@@ -7,6 +7,8 @@ var a_voz = false
 
 func _ready():
 	set_font_sizes()
+	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
+	scene_voice()
 
 func _input(event):
 	if event is InputEventKey:
@@ -23,6 +25,7 @@ func _input(event):
 
 
 func _on_SelectionSound_finished():
+	VoiceConfiguration.stop_voice()
 	if a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
 	if a_tamano_letras: get_tree().change_scene("res://scenes/TamañoLetrasScene.tscn")
 	if a_voz: get_tree().change_scene("res://scenes/VozScene.tscn")
@@ -49,3 +52,5 @@ func set_font_sizes():
 	$VBoxContainer/CenterContainer/VolverAConfigButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$IrAlMenuScene/IrAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 
+func scene_voice():
+	$"/root/VoiceConfiguration".play_voice("res://resources/voices/Accesibility/accesibility_voice.ogg")

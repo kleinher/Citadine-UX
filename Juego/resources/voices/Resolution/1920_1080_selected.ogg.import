@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/1920_1080_selected.ogg-2fef12c8c31f400d1ce232dc30804bf5.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/Resolution/1920_1080_selected.ogg"
+dest_files=[ "res://.import/1920_1080_selected.ogg-2fef12c8c31f400d1ce232dc30804bf5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
