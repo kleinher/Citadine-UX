@@ -11,6 +11,8 @@ var a_dificultad = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_font_sizes()
+	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
+	scene_voice()
 
 
 func _input(event):
@@ -36,10 +38,12 @@ func _on_SalirButton_button_up():
 
 
 func _on_SelectionSound_finished():
+	VoiceConfiguration.stop_voice()
 	if saliendo: get_tree().quit()
 	elif a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
 	elif a_play: get_tree().change_scene("res://scenes/Juego/Mapa.tscn")
 	elif a_dificultad: get_tree().change_scene("res://scenes/DificultadScene.tscn")
+	
 
 
 func _on_ConfigurarButton_pressed():
@@ -60,3 +64,6 @@ func set_font_sizes():
 func _on_DificultadButton_pressed():
 	a_dificultad = true
 	$SelectionSound.play()
+
+func scene_voice():
+	$"/root/VoiceConfiguration".play_voice("res://resources/voices/MainMenu/main_menu_voice.ogg")

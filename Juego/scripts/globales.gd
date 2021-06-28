@@ -38,9 +38,3 @@ func _ready():
 		save()
 	else:
 		load_config()
-
-
-
-func _input(event):
-	if event is InputEventKey and event.pressed and event.scancode == KEY_M:
-		VoiceConfiguration.toggle_voice()

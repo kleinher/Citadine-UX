@@ -27,6 +27,9 @@ func toggle_voice():
 		Globales.config.voz_encendida = true
 		emit_signal("voice_activated")
 	Globales.save()
+
+func stop_voice():
+	audio.stop()
 		
 	
 func changeVolume(value):
@@ -55,3 +58,13 @@ func _music(action):
 	
 	Globales.config.sonido=audio.volume_db	
 	Globales.save()
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_M: #MUTE
+			toggle_voice()
+		elif event.scancode == KEY_R: #RESTART
+			audio.stop()
+			emit_signal("voice_activated")
+		elif event.scancode == KEY_S: #STOP
+			audio.stop()

@@ -8,7 +8,7 @@ func _ready():
 	
 	
 func _input(event):
-	if event is InputEventKey and event.pressed and event.scancode != KEY_M:
+	if event is InputEventKey and event.pressed and event.scancode != KEY_M and event.scancode != KEY_R and event.scancode != KEY_S:
 		$SelectionSound.play()
 
 func _on_CualquierTeclaLabel_mouse_entered():
@@ -25,6 +25,7 @@ func _on_CualquierTeclaLabel_gui_input(event):
 
 
 func _on_SelectionSound_finished():
+	VoiceConfiguration.stop_voice()
 	get_tree().change_scene("res://scenes/MainMenu.tscn")
 
 
