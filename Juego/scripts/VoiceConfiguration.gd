@@ -1,4 +1,5 @@
 extends Node
+signal voice_activated
 var volume=0.0
 var min_vol=-24
 var music_position = 0.0
@@ -9,6 +10,7 @@ func _ready():
 	audio = AudioStreamPlayer.new()
 
 func play_voice(resource):
+	if not Globales.config.voz_encendida: return
 	var voice = load(resource)
 	voice.set_loop(false)
 	audio.stream = voice
@@ -16,6 +18,16 @@ func play_voice(resource):
 	add_child(audio)
 	audio.volume_db=Globales.config.volumen_voz	
 	changeVolume(audio.volume_db)
+
+func toggle_voice():
+	if Globales.config.voz_encendida:
+		Globales.config.voz_encendida = false
+		audio.stop()
+	else:
+		Globales.config.voz_encendida = true
+		emit_signal("voice_activated")
+	Globales.save()
+		
 	
 func changeVolume(value):
 	print("Music changed. Level: %d" % value)

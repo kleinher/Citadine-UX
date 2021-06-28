@@ -5,6 +5,7 @@ var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
 	"volumen_voz": 1,
+	"voz_encendida": true,
 	"contraste": 1,
 	"resolucion_x": 1080,
 	"resolucion_y": 720,
@@ -37,3 +38,9 @@ func _ready():
 		save()
 	else:
 		load_config()
+
+
+
+func _input(event):
+	if event is InputEventKey and event.pressed and event.scancode == KEY_M:
+		VoiceConfiguration.toggle_voice()

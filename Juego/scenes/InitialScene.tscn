@@ -41,13 +41,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SilenciarVozColor" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -408.0
+margin_top = 420.0
+margin_right = 407.0
+margin_bottom = 542.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CualquierTeclaColor" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -361.0
-margin_top = 630.0
+margin_top = 600.0
 margin_right = 355.0
-margin_bottom = 688.0
+margin_bottom = 658.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,20 +78,20 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -440.0
 margin_top = 20.0
-margin_right = 440.0
-margin_bottom = 714.0
-custom_constants/separation = 270
+margin_right = 437.0
+margin_bottom = 820.0
+custom_constants/separation = 70
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 880.0
+margin_right = 877.0
 margin_bottom = 341.0
 custom_constants/separation = 25
 
 [node name="GameTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 880.0
+margin_right = 877.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
 text = "INUNDADOS"
@@ -92,7 +103,7 @@ __meta__ = {
 
 [node name="GameDescription" type="Label" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 880.0
+margin_right = 877.0
 margin_bottom = 213.0
 custom_fonts/font = SubResource( 2 )
 text = "Bienvenido a Inundados, el juego donde tenés que arreglar la ciudad para que no se inunde."
@@ -102,7 +113,7 @@ autowrap = true
 
 [node name="MenuUsage" type="Label" parent="VBoxContainer/VBoxContainer"]
 margin_top = 238.0
-margin_right = 880.0
+margin_right = 877.0
 margin_bottom = 341.0
 custom_fonts/font = SubResource( 3 )
 text = "Utilizá los números del teclado o el mouse para navegar por el menú."
@@ -113,10 +124,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SilenciarVozLabel" type="Label" parent="VBoxContainer"]
+margin_top = 411.0
+margin_right = 877.0
+margin_bottom = 514.0
+mouse_filter = 0
+custom_fonts/font = SubResource( 4 )
+text = "Pulsá la tecla M en cualquier momento del juego para silenciar la voz"
+align = 1
+autowrap = true
+
 [node name="CualquierTeclaLabel" type="Label" parent="VBoxContainer"]
-margin_top = 611.0
-margin_right = 880.0
-margin_bottom = 661.0
+margin_top = 584.0
+margin_right = 877.0
+margin_bottom = 634.0
 mouse_filter = 0
 custom_fonts/font = SubResource( 4 )
 text = "Pulsá cualquier tecla para continuar"
@@ -129,6 +150,9 @@ __meta__ = {
 [node name="SelectionSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 
+[connection signal="gui_input" from="VBoxContainer/SilenciarVozLabel" to="." method="_on_SilenciarVozLabel_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/SilenciarVozLabel" to="." method="_on_SilenciarVozLabel_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/SilenciarVozLabel" to="." method="_on_SilenciarVozLabel_mouse_exited"]
 [connection signal="gui_input" from="VBoxContainer/CualquierTeclaLabel" to="." method="_on_CualquierTeclaLabel_gui_input"]
 [connection signal="mouse_entered" from="VBoxContainer/CualquierTeclaLabel" to="." method="_on_CualquierTeclaLabel_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/CualquierTeclaLabel" to="." method="_on_CualquierTeclaLabel_mouse_exited"]
