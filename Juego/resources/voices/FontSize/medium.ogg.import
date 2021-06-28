@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/medium.ogg-c4a8acdecd627df5fe981ce663ed3378.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/FontSize/medium.ogg"
+dest_files=[ "res://.import/medium.ogg-c4a8acdecd627df5fe981ce663ed3378.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
