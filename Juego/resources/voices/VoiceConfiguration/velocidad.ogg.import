@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/velocidad.ogg-ce2ded4116041055a6e3fb2a5fe055ba.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/VoiceConfiguration/velocidad.ogg"
+dest_files=[ "res://.import/velocidad.ogg-ce2ded4116041055a6e3fb2a5fe055ba.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/voice_configuration_voice.ogg-97420cdeaa9ffd14aa60151454ad408b.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/VoiceConfiguration/voice_configuration_voice.ogg"
+dest_files=[ "res://.import/voice_configuration_voice.ogg-97420cdeaa9ffd14aa60151454ad408b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

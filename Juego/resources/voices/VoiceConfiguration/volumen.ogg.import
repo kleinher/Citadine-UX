@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/volumen.ogg-ff8cd1e77fec3a02b3ad68cdc038ffbf.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/VoiceConfiguration/volumen.ogg"
+dest_files=[ "res://.import/volumen.ogg-ff8cd1e77fec3a02b3ad68cdc038ffbf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

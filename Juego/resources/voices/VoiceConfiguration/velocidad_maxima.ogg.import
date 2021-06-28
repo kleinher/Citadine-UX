@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/velocidad_maxima.ogg-2f591d70e9f1863d54293a7ffae481b6.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/VoiceConfiguration/velocidad_maxima.ogg"
+dest_files=[ "res://.import/velocidad_maxima.ogg-2f591d70e9f1863d54293a7ffae481b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
