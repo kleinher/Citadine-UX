@@ -67,7 +67,7 @@ margin_left = -228.0
 margin_top = 20.0
 margin_right = 229.0
 margin_bottom = 398.0
-custom_constants/separation = 75
+custom_constants/separation = 250
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,6 +96,7 @@ margin_top = 110.0
 margin_right = 474.0
 margin_bottom = 146.0
 grow_vertical = 0
+custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -108,7 +109,7 @@ text = "Volumen"
 align = 1
 
 [node name="Music" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 125.0
+margin_left = 141.0
 margin_top = 10.0
 margin_right = 474.0
 margin_bottom = 26.0
@@ -119,9 +120,9 @@ min_value = -24.0
 max_value = 0.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 221.0
+margin_top = 396.0
 margin_right = 474.0
-margin_bottom = 277.0
+margin_bottom = 452.0
 
 [node name="VolverAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
 margin_right = 474.0

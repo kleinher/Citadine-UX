@@ -10,6 +10,7 @@ func _ready():
 	scene_voice()
 	$VBoxContainer/VBoxContainer/HBoxContainer/VelocidadBar.value = Globales.config.velocidad_voz
 	$VBoxContainer/VBoxContainer/HBoxContainer2/VolumenBar.value = Globales.config.volumen_voz
+	$VBoxContainer/VBoxContainer/EncendidaCheck.pressed = Globales.config.voz_encendida
 
 func _input(event):
 	if event is InputEventKey:
@@ -36,6 +37,8 @@ func _input(event):
 			$VBoxContainer/VBoxContainer/HBoxContainer2/VolumenBar.value -= 1
 			if not VoiceConfiguration.voice_playing():
 				VoiceConfiguration.play_voice("res://resources/voices/VoiceConfiguration/volumen.ogg")
+		elif event.scancode == KEY_M:
+			$VBoxContainer/VBoxContainer/EncendidaCheck.pressed = Globales.config.voz_encendida
 
 
 func _on_VolverAAccesibilidadButton_pressed():

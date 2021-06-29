@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dificil.ogg-53b0a6e6fd74df8f3c8e1cec39766098.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/DifficultyConfiguration/dificil.ogg"
+dest_files=[ "res://.import/dificil.ogg-53b0a6e6fd74df8f3c8e1cec39766098.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -10,6 +10,8 @@ var dificil = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_font_sizes()
+	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
+	scene_voice()
 
 func _on_FacilButton_pressed():
 	facil = true
@@ -49,12 +51,15 @@ func _on_SelectionSound_finished():
 	if a_menu: get_tree().change_scene("res://scenes/MainMenu.tscn")
 	elif facil: 
 		DificultadConfig.set_dificultad(0)
+		VoiceConfiguration.play_voice("res://resources/voices/DifficultyConfiguration/facil.ogg")
 		facil = false
 	elif normal: 
 		DificultadConfig.set_dificultad(1)
+		VoiceConfiguration.play_voice("res://resources/voices/DifficultyConfiguration/normal.ogg")
 		normal = false
 	elif dificil: 
 		DificultadConfig.set_dificultad(2)
+		VoiceConfiguration.play_voice("res://resources/voices/DifficultyConfiguration/dificil.ogg")
 		dificil = false
 
 func set_font_sizes():
@@ -64,6 +69,7 @@ func set_font_sizes():
 	$VBoxContainer/VBoxContainer/CenterContainer3/DificilButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 	$VBoxContainer/CenterContainer/VolverAlMenuButton.get("custom_fonts/font").set_size(TamanioLetrasConfig.get_boton_size())
 
-
+func scene_voice():
+	$"/root/VoiceConfiguration".play_voice("res://resources/voices/DifficultyConfiguration/difficulty_configuration_voice.ogg")
 
 
