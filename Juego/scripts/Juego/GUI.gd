@@ -7,7 +7,6 @@ func _ready():
 	connect("tile_agregado",self,"actualizarContador")
 	$HBoxContainer/Bars/CasaCounter.contador = 10
 func actualizarContador(id):
-	print("Entro")
 	match id:
 		0:
 			count_arbol+=1

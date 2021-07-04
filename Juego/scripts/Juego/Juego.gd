@@ -2,7 +2,9 @@ extends Node2D
 
 onready var map = get_node("Mapa")
 var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
-
+export var contadorArbol = 0
+export var contadorBasura = 0
+export var contadorCalle = 0
 var currentTile = Vector2(10, 10)
 const MAX_Y = 13
 const MAX_X = 20
@@ -68,18 +70,23 @@ func elegirObjetoACrear(idMapa, idCalles):
 	
 	match idMapa:
 		tilesMapa.tocon:
-			print(tilesMapa.tocon)
+			contadorArbol+=1
 			arreglarTileMapa(tilesMapa.arbol,$Mapa)
 		tilesMapa.casaBasura:
 			arreglarTileMapa(tilesMapa.casa,$Mapa)
+			contadorBasura+=1
 	match idCalles:
 		tilesCalles.codoDLsucio:
+			contadorCalle+=1
 			arreglarTileMapa(tilesCalles.codoDLlimpio,$Calles)
 		tilesCalles.codoULsucio:
+			contadorCalle+=1
 			arreglarTileMapa(tilesCalles.codoULlimpio,$Calles)
 		tilesCalles.codoDRsucio:
+			contadorCalle+=1
 			arreglarTileMapa(tilesCalles.codoDRlimpio,$Calles)
 		tilesCalles.codoDRsucio:
+			contadorCalle+=1
 			arreglarTileMapa(tilesCalles.codoDRlimpio,$Calles)
 
 func arreglarTileMapa(tile,tilemap):
@@ -93,5 +100,9 @@ func display_tutorial():
 	add_child(tuto)
 	get_tree().paused = true
 
+func resetear():
+	contadorArbol = 0
+	contadorBasura = 0
+	contadorCalle = 0
 func tiempoFinalizado():
 	get_parent().calcularResultado();

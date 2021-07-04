@@ -30,12 +30,12 @@ margin_right = 1058.0
 margin_bottom = 117.0
 
 [node name="Counters" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 934.0
+margin_right = 954.0
 margin_bottom = 97.0
 size_flags_horizontal = 3
 
 [node name="LifeBar" parent="HBoxContainer/Counters" instance=ExtResource( 1 )]
-margin_right = 934.0
+margin_right = 954.0
 
 [node name="EnergyBar" parent="HBoxContainer/Counters" instance=ExtResource( 4 )]
 visible = false
@@ -44,7 +44,7 @@ margin_right = 934.0
 margin_bottom = 97.0
 
 [node name="Bars" type="HBoxContainer" parent="HBoxContainer"]
-margin_left = 938.0
+margin_left = 958.0
 margin_right = 1038.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 80, 40 )
@@ -59,6 +59,7 @@ margin_right = 100.0
 margin_bottom = 40.0
 
 [node name="ArbolCounter" parent="HBoxContainer/Bars" instance=ExtResource( 3 )]
+visible = false
 margin_left = 0.0
 margin_right = 100.0
 margin_bottom = 40.0

@@ -6,6 +6,15 @@
 
 [node name="LifeBar" instance=ExtResource( 1 )]
 
+[node name="Number" parent="Bar/Count/Background" index="0"]
+visible = false
+
+[node name="Title" parent="Bar/Count/Background" index="1"]
+margin_left = 23.9385
+margin_top = 1.25992
+margin_right = 73.9385
+margin_bottom = 52.2599
+
 [node name="Gauge" parent="Bar" index="1"]
 value = 100.0
 script = ExtResource( 2 )

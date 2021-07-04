@@ -10,6 +10,7 @@ var a_dificultad = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	set_font_sizes()
 	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
 	scene_voice()

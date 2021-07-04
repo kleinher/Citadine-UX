@@ -42,5 +42,4 @@ func _on_SilenciarVozLabel_gui_input(event):
 		VoiceConfiguration.toggle_voice()
 
 func scene_voice():
-	print("llega")
 	$"/root/VoiceConfiguration".play_voice("res://resources/voices/InitialScene/initial_scene_voice.ogg")
