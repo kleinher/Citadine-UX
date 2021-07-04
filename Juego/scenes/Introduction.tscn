@@ -1,0 +1,180 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-MediumItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/flecha.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/DialogoIntro.gd" type="Script" id=5]
+[ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=6]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 883.182, 505.381 ), Vector2( 883.182, 405.381 ), Vector2( 883.182, 479.455 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 42
+font_data = ExtResource( 4 )
+
+[node name="Introduction" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialogo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Dialogo"]
+modulate = Color( 0.0862745, 0.968627, 0.454902, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -372.0
+margin_top = -432.0
+margin_right = 380.0
+margin_bottom = -96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Dialogo"]
+
+[node name="GameTitle" type="Label" parent="Dialogo"]
+margin_left = 128.0
+margin_top = 144.0
+margin_right = 1005.0
+margin_bottom = 229.0
+rect_pivot_offset = Vector2( 424, 40 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.490196, 0.745098, 0.490196, 1 )
+text = "INUNDADOS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogo"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -356.0
+margin_top = -424.0
+margin_right = 356.0
+margin_bottom = -108.0
+rect_pivot_offset = Vector2( 240, 200 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+meta_underlined = false
+tab_size = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureRect" parent="Dialogo"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.774
+anchor_right = 0.5
+anchor_bottom = 0.774
+margin_left = 343.182
+margin_top = -53.9823
+margin_right = 449.182
+margin_bottom = 50.0159
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogo/Next"]
+autoplay = "esperando"
+anims/esperando = SubResource( 3 )
+
+[node name="SelectionSound" type="AudioStreamPlayer" parent="Dialogo"]
+stream = ExtResource( 6 )
+
+[node name="Iniciar" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -912.0
+margin_top = -80.0
+margin_right = -592.0
+margin_bottom = -24.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 4 )
+text = "1. Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="Button" parent="."]
+margin_left = 600.0
+margin_top = 640.0
+margin_right = 920.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
+text = "4. Salir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="tween_completed" from="Dialogo/Tween" to="Dialogo" method="_on_Tween_tween_completed"]
+[connection signal="finished" from="Dialogo/SelectionSound" to="Dialogo" method="_on_SelectionSound_finished"]
+[connection signal="pressed" from="Iniciar" to="Dialogo" method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="Salir" to="Dialogo" method="_on_Salir_pressed"]
