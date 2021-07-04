@@ -66,6 +66,7 @@ script = ExtResource( 14 )
 
 [node name="FeedbackCoin" type="AudioStreamPlayer2D" parent="Feedback"]
 stream = ExtResource( 15 )
+volume_db = 24.0
 
 [connection signal="tile_agregado" from="Mapa" to="GUI" method="_on_Mapa_tile_agregado"]
 [connection signal="timeout" from="NubeTimer" to="NubeTimer" method="_on_NubeTimer_timeout"]

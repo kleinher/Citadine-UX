@@ -4,7 +4,7 @@ const FILE_NAME = "user://config-data.json"
 var config = {
 	"tamanioLetras": 0,
 	"sonido": 0,
-	"volumen_voz": 24,
+	"volumen_voz": 10,
 	"voz_encendida": true,
 	"velocidad_voz": 1.0,
 	"resolucion_x": 1080,

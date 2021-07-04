@@ -94,5 +94,4 @@ func display_tutorial():
 	get_tree().paused = true
 
 func tiempoFinalizado():
-	
 	get_parent().calcularResultado();

@@ -41,7 +41,7 @@ func _on_SelectionSound_finished():
 	VoiceConfiguration.stop_voice()
 	if saliendo: get_tree().quit()
 	elif a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
-	elif a_play: get_tree().change_scene("res://scenes/Juego/Mapa.tscn")
+	elif a_play: get_tree().change_scene("res://scenes/Juego.tscn")
 	elif a_dificultad: get_tree().change_scene("res://scenes/DificultadScene.tscn")
 	
 
