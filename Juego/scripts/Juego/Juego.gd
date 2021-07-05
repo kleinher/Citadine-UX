@@ -26,6 +26,8 @@ var tilesCalles = {
 	"codoDLlimpio":tilesetCalles.find_tile_by_name("codoDL-limpio"),
 	"codoDRlimpio":tilesetCalles.find_tile_by_name("codoDR-limpio")
 }
+var dijo_voz = false
+var prev_voz
 func _ready():
 	display_tutorial();
 	$NubeTimer._on_NubeTimer_timeout()
@@ -55,19 +57,28 @@ func _input(event):
 		#Determino la posición actual con el mouse
 		currentTile = $Mapa.world_to_map(local_position)
 	
-	match $Mapa.get_cellv(currentTile):
-		0:
-			$SelectionTool.rojo()
-		_:
-			$SelectionTool.normal()
-	#Pinto la posición determinada
 	
+	if prev_voz != currentTile:
+		prev_voz = currentTile
+		match $Mapa.get_cellv(currentTile):
+			tilesMapa.tocon:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/arbol_talado.ogg")
+			tilesMapa.arbol:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/arbol.ogg")
+			tilesMapa.casa:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/casa.ogg")
+			tilesMapa.casaBasura:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/casa_con_basura.ogg")
+		match $Calles.get_cellv(currentTile):
+			tilesCalles.codoDLsucio, tilesCalles.codoDRsucio, tilesCalles.codoULsucio, tilesCalles.codoURsucio:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/boca_de_tormenta_tapada.ogg")
+			tilesCalles.codoDLlimpio, tilesCalles.codoDRlimpio, tilesCalles.codoULlimpio, tilesCalles.codoURlimpio:
+				VoiceConfiguration.play_voice("res://resources/voices/GameVoices/boca_de_tormenta.ogg")
 	$SelectionTool/indicadorMouse.position = $Mapa.map_to_world(currentTile)
 	if event.is_action_pressed("mouse_lclick") or event.is_action_pressed("ui_accept"):
 		elegirObjetoACrear($Mapa.get_cellv(currentTile), $Calles.get_cellv(currentTile)) #Pongo un árbol en la posición
 
 func elegirObjetoACrear(idMapa, idCalles):
-	
 	match idMapa:
 		tilesMapa.tocon:
 			contadorArbol+=1
@@ -105,4 +116,5 @@ func resetear():
 	contadorBasura = 0
 	contadorCalle = 0
 func tiempoFinalizado():
-	get_parent().calcularResultado();
+	get_parent().calcularResultado(); 
+  
