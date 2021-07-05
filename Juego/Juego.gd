@@ -3,7 +3,7 @@ extends Node2D
 var ganaste = preload("res://scenes/Juego/GanasteScene.tscn")
 var perdiste = preload("res://scenes/Juego/PerdisteScene.tscn")
 var inGameMenu = preload("res://scenes/InGameMenu.tscn")
-var currentLevelIndex = 0;
+var currentLevelIndex
 var currentLevel
 
 var niveles = [
@@ -23,6 +23,7 @@ var problemas = [{ "arbol": 26,
 
 func _ready():
 	connect("siguiente_nivel",self,"changeLevel")
+	currentLevelIndex = NivelConfig.get_level()
 	currentLevel = niveles[currentLevelIndex].instance()
 	add_child(currentLevel)
 
@@ -43,17 +44,13 @@ func changeLevel():
 #Se invoca desde el nivel actual cuando finaliza el tiempo.
 #La idea seria ver si gano o perdió y 
 func calcularResultado():
-	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	#Si perdiste volver a instanciar current level
 	if !ganaste():
-		currentLevel.call_deferred("free")
-		add_child(perdiste.instance())
+		get_tree().change_scene("res://scenes/Juego/PerdisteScene.tscn")
 	else:
-		#Si ganaste Remove the current level
-		currentLevelIndex+=1;
-		remove_child(currentLevel)
-		currentLevel.call_deferred("free")
-		add_child(ganaste.instance())
+		NivelConfig.next_level()
+		get_tree().change_scene("res://scenes/Juego/GanasteScene.tscn")
 	
 func ganaste():
 	var total = problemas[currentLevelIndex].arbol + problemas[currentLevelIndex].basura + problemas[currentLevelIndex].calle;

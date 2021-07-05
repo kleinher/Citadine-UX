@@ -18,6 +18,7 @@ func _ready():
 	AudioServer.add_bus_effect(BUS_INDEX, shift, EFFECT_INDEX)
 	audio.bus = BUS_NAME
 	audio.pitch_scale = pitch
+	changeVolume(Globales.config.volumen_voz)
 	
 func voice_speed(speed):
 	pitch = speed

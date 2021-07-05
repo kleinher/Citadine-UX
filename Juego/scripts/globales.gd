@@ -3,13 +3,13 @@ extends Node
 const FILE_NAME = "user://config-data.json"
 var config = {
 	"tamanioLetras": 0,
-	"sonido": 0,
-	"volumen_voz": 10,
+	"sonido": -5,
+	"volumen_voz": 0,
 	"voz_encendida": true,
 	"velocidad_voz": 1.0,
 	"resolucion_x": 1080,
 	"resolucion_y": 720,
-	"nivel": 1,
+	"nivel": 0,
 	"dificultad": 0,
 }
 

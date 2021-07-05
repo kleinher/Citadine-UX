@@ -19,8 +19,8 @@ size = 42
 font_data = ExtResource( 3 )
 
 [node name="PerdisteScene" type="Control"]
-margin_right = 1080.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,6 +101,7 @@ text = "¡La ciudad necesita más árboles para poder soportar la inundación!
 ¡Asegurate de quitar la basura de las casas!
 
 Los desagües de las calles deben de estar limpios para que el agua se vaya."
+align = 1
 autowrap = true
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]

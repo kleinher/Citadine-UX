@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ganaste_scene_voice.ogg-8b8e68e086e878451c733c7133d98df9.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/GanasteScene/ganaste_scene_voice.ogg"
+dest_files=[ "res://.import/ganaste_scene_voice.ogg-8b8e68e086e878451c733c7133d98df9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
