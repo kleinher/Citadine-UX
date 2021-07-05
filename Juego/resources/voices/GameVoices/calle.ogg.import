@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/calle.ogg-5aac35a88b38ca11815b3c4be9801cb1.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/GameVoices/calle.ogg"
+dest_files=[ "res://.import/calle.ogg-5aac35a88b38ca11815b3c4be9801cb1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

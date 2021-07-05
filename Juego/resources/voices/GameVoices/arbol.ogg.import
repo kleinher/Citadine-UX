@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/arbol.ogg-6fedd7b64a0540467cd008a146e4e8de.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/GameVoices/arbol.ogg"
+dest_files=[ "res://.import/arbol.ogg-6fedd7b64a0540467cd008a146e4e8de.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

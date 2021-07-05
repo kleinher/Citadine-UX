@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/casa_con_basura.ogg-d2e32c21fc1fbc19b5976117e24ae62b.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/GameVoices/casa_con_basura.ogg"
+dest_files=[ "res://.import/casa_con_basura.ogg-d2e32c21fc1fbc19b5976117e24ae62b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
