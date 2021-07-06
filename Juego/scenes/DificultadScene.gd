@@ -5,14 +5,27 @@ var a_menu = false
 var facil = false
 var normal = false
 var dificil = false
-
+var tema = preload("res://botonTema.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_font_sizes()
 	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
 	scene_voice()
-
+func _process(delta):
+	match Globales.config.dificultad:
+		0:
+			$VBoxContainer/VBoxContainer/CenterContainer/FacilButton.theme = tema
+			$VBoxContainer/VBoxContainer/CenterContainer2/NormalButton.theme = null
+			$VBoxContainer/VBoxContainer/CenterContainer3/DificilButton.theme = null
+		1:
+			$VBoxContainer/VBoxContainer/CenterContainer/FacilButton.theme = null
+			$VBoxContainer/VBoxContainer/CenterContainer3/DificilButton.theme = null
+			$VBoxContainer/VBoxContainer/CenterContainer2/NormalButton.theme = tema
+		2:
+			$VBoxContainer/VBoxContainer/CenterContainer2/NormalButton.theme = null
+			$VBoxContainer/VBoxContainer/CenterContainer/FacilButton.theme = null
+			$VBoxContainer/VBoxContainer/CenterContainer3/DificilButton.theme = tema
 func _on_FacilButton_pressed():
 	facil = true
 	$SelectionSound.play()
