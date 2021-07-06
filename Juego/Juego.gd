@@ -13,12 +13,14 @@ var niveles = [
 
 	
 var problemas = [{ "arbol": 26,
-			   "basura":5,
-			   "calle": 2
+			   "basura":2,
+			   "calle": 3,
+				"total":31
 			 },
 			{ "arbol": 30,
 			   "basura":6,
-			   "calle": 3
+			   "calle": 3,
+				"total": 39
 			 }] 
 
 func _ready():
@@ -26,7 +28,11 @@ func _ready():
 	currentLevelIndex = NivelConfig.get_level()
 	currentLevel = niveles[currentLevelIndex].instance()
 	add_child(currentLevel)
-
+func _process(delta):
+	var actual=currentLevel.contadorArbol+currentLevel.contadorBasura+currentLevel.contadorCalle
+	if(actual == problemas[currentLevelIndex].total):
+		calcularResultado()
+		
 #Esta función se invoca con el botón de "siguiente nivel" en la escena 
 #"GanasteScene"
 func changeLevel():
