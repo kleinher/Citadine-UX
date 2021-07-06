@@ -6,7 +6,7 @@
 [ext_resource path="res://resources/Menu-Selection-sound.mp3" type="AudioStream" id=4]
 [ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=6]
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
 
@@ -47,11 +47,11 @@ func set_font_sizes():
 	
 "
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 72
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 42
 font_data = ExtResource( 2 )
 
@@ -59,7 +59,7 @@ font_data = ExtResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -943.362, -366.26 )
-script = SubResource( 3 )
+script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -110,7 +110,7 @@ __meta__ = {
 [node name="ContrasteTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
 margin_right = 566.0
 margin_bottom = 85.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Contraste"
 align = 1
 valign = 1
@@ -130,7 +130,7 @@ margin_bottom = 56.0
 rect_min_size = Vector2( 370, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "1. Alto contraste"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
@@ -144,7 +144,7 @@ margin_right = 466.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "2. Contraste medio"
 
 [node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
@@ -159,7 +159,7 @@ margin_bottom = 56.0
 rect_min_size = Vector2( 370, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "3. Bajo contraste"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
@@ -173,7 +173,7 @@ margin_right = 514.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "4. Volver a accesibilidad"
 __meta__ = {
 "_edit_use_anchors_": false

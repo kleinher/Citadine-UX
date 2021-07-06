@@ -1,0 +1,158 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/IrAlMenuScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/ComoJugarScene.gd" type="Script" id=3]
+[ext_resource path="res://resources/city_drawing.jpg" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="ComoJugar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 2.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -268.0
+margin_top = 20.0
+margin_right = 268.0
+margin_bottom = 124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxColor2" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.847059 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -530.0
+margin_top = 138.0
+margin_right = 525.0
+margin_bottom = 713.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -46.0
+margin_bottom = -39.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComoJugarTitle" type="Label" parent="VBoxContainer"]
+margin_right = 1020.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 1 )
+text = "Cómo jugar"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 115.0
+margin_right = 1020.0
+margin_bottom = 687.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="ObjetivoVbox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 537.0
+margin_bottom = 572.0
+
+[node name="ObjetivoLabel" type="Label" parent="VBoxContainer/HBoxContainer/ObjetivoVbox"]
+margin_right = 537.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+text = "Objetivo"
+
+[node name="ObjetivoLabel2" type="Label" parent="VBoxContainer/HBoxContainer/ObjetivoVbox"]
+margin_top = 42.0
+margin_right = 537.0
+margin_bottom = 572.0
+custom_fonts/font = SubResource( 2 )
+text = "El objetivo del juego es arreglar
+la ciudad para evitar que se inunde.
+Cada nivel tiene problemas que 
+deben ser solucionados. Cuando el 
+jugador los solucione o se acabe el
+tiempo, el juego se termina. Para 
+tener más tiempo se debe cambiar
+la dificultad desde el menú Dificultad.
+
+Las cosas que se pueden arreglar
+son: árboles talados, bocas de 
+tormenta tapadas y casas con 
+basura."
+align = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlesVbox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 587.0
+margin_right = 1020.0
+margin_bottom = 572.0
+
+[node name="ControlesLabel" type="Label" parent="VBoxContainer/HBoxContainer/ControlesVbox"]
+margin_right = 433.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+text = "Controles"
+
+[node name="ControlesLabel2" type="Label" parent="VBoxContainer/HBoxContainer/ControlesVbox"]
+margin_top = 42.0
+margin_right = 433.0
+margin_bottom = 531.0
+custom_fonts/font = SubResource( 3 )
+text = "Controles de voz:     
+Tecla M: encender y apagar 
+la voz.
+Tecla R: volver a escuchar el
+mensaje.
+Tecla S: detener el mensaje.
+
+Controles del juego:
+Mouse y flechas del
+teclado: moverse por el mapa.
+Click izquierdo y tecla X: 
+arreglar problema."
+
+[node name="IrAlMenuScene" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = 87.8625
+margin_top = 38.5599
+margin_right = 520.864
+margin_bottom = 38.5599

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/como_jugar_scene_voice.ogg-6dfa916aba4697285d602e7955c45384.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/ComoJugarScene/como_jugar_scene_voice.ogg"
+dest_files=[ "res://.import/como_jugar_scene_voice.ogg-6dfa916aba4697285d602e7955c45384.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

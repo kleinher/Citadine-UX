@@ -6,6 +6,7 @@ var saliendo = false # Uso esta variable para poder reproducir el SelectionSound
 var a_config = false
 var a_play = false
 var a_dificultad = false
+var a_como_jugar = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,6 +29,9 @@ func _input(event):
 			a_dificultad = true
 			$SelectionSound.play()
 		elif event.is_action_pressed("4_selection"):
+			a_como_jugar = true
+			$SelectionSound.play()
+		elif event.is_action_pressed("5_selection"):
 			saliendo = true
 			$SelectionSound.play()
 
@@ -44,6 +48,7 @@ func _on_SelectionSound_finished():
 	elif a_config: get_tree().change_scene("res://scenes/ConfigurationScene.tscn")
 	elif a_play: get_tree().change_scene("res://scenes/Juego.tscn")
 	elif a_dificultad: get_tree().change_scene("res://scenes/DificultadScene.tscn")
+	elif a_como_jugar: get_tree().change_scene("res://scenes/ComoJugarScene.tscn")
 	
 
 
@@ -68,3 +73,8 @@ func _on_DificultadButton_pressed():
 
 func scene_voice():
 	$"/root/VoiceConfiguration".play_voice("res://resources/voices/MainMenu/main_menu_voice.ogg")
+
+
+func _on_ComoJugarButton_pressed():
+	a_como_jugar = true
+	$SelectionSound.play()

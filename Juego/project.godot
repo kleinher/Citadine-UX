@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Citadine-UX"
-run/main_scene="res://scenes/Introduction.tscn"
+run/main_scene="res://scenes/InitialScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]
