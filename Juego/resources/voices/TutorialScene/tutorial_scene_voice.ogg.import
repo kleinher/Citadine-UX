@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tutorial_scene_voice.ogg-476dfd47e087420d5a1fc097e1f44942.oggstr"
+
+[deps]
+
+source_file="res://resources/voices/TutorialScene/tutorial_scene_voice.ogg"
+dest_files=[ "res://.import/tutorial_scene_voice.ogg-476dfd47e087420d5a1fc097e1f44942.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -9,6 +9,7 @@ const EFFECT_INDEX = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pause_mode = Node.PAUSE_MODE_PROCESS
 	pitch = Globales.config.velocidad_voz
 	audio = AudioStreamPlayer.new()
 	var shift = AudioEffectPitchShift.new()
