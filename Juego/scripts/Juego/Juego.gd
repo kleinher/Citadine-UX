@@ -1,5 +1,6 @@
 extends Node2D
 
+signal tiempo_finalizado
 onready var map = get_node("Mapa")
 var menu = preload("res://scenes/Juego/PopUpMenu.tscn")
 export var contadorArbol = 0
@@ -115,6 +116,7 @@ func resetear():
 	contadorArbol = 0
 	contadorBasura = 0
 	contadorCalle = 0
+	
 func tiempoFinalizado():
 	get_parent().calcularResultado(); 
   

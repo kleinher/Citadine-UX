@@ -12,6 +12,7 @@ func _ready():
 	set_font_sizes()
 	VoiceConfiguration.connect("voice_activated", self, "scene_voice")
 	scene_voice()
+	
 func _process(delta):
 	match Globales.config.dificultad:
 		0:
@@ -26,6 +27,7 @@ func _process(delta):
 			$VBoxContainer/VBoxContainer/CenterContainer2/NormalButton.theme = null
 			$VBoxContainer/VBoxContainer/CenterContainer/FacilButton.theme = null
 			$VBoxContainer/VBoxContainer/CenterContainer3/DificilButton.theme = tema
+		
 func _on_FacilButton_pressed():
 	facil = true
 	$SelectionSound.play()

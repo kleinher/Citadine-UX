@@ -5,6 +5,8 @@ var perdiste = preload("res://scenes/Juego/PerdisteScene.tscn")
 var inGameMenu = preload("res://scenes/InGameMenu.tscn")
 var currentLevelIndex
 var currentLevel
+signal tiempo_finalizado
+signal siguiente_nivel
 
 var niveles = [
 	preload("res://scenes/Juego/nivel1.tscn"),
@@ -25,6 +27,7 @@ var problemas = [{ "arbol": 26,
 
 func _ready():
 	connect("siguiente_nivel",self,"changeLevel")
+	connect("tiempo_finalizado", self,"tiempoFinalizado")
 	currentLevelIndex = NivelConfig.get_level()
 	currentLevel = niveles[currentLevelIndex].instance()
 	add_child(currentLevel)

@@ -1,6 +1,6 @@
 extends Node
 
-const TIMES = [60, 40, 25]
+const TIMES = [0, 1, 2]
 
 func _ready():
 	pass

@@ -3,6 +3,7 @@ extends MarginContainer
 var count_casa = 0
 var count_arbol = 0
 var count_basurero = 0
+signal tile_agregado
 func _ready():
 	connect("tile_agregado",self,"actualizarContador")
 	$HBoxContainer/Bars/CasaCounter.contador = 10

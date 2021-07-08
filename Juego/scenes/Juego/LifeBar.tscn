@@ -20,7 +20,8 @@ expand = true
 stretch_mode = 1
 
 [node name="Gauge" parent="Bar" index="1"]
-value = 100.0
+max_value = 200.0
+value = 200.0
 script = ExtResource( 2 )
 
 [node name="Tiempo_sonido_reloj" parent="Bar/Gauge" index="0" instance=ExtResource( 3 )]
