@@ -21,4 +21,5 @@ func _on_IrAlMenuButton_pressed():
 
 
 func _on_SelectionSoud_finished():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene("res://scenes/MainMenu.tscn")
