@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://assets/GUI/ezgif.com-gif-maker(1).png" type="Texture" id=2]
 [ext_resource path="res://scenes/Dialogo.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="Theme" id=1]
 
@@ -120,6 +121,10 @@
 7/shapes = [  ]
 7/z_index = 0
 
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 4 )
+
 [node name="Tutorial" type="Control"]
 anchor_right = 0.382
 anchor_bottom = 0.428
@@ -133,10 +138,10 @@ __meta__ = {
 }
 
 [node name="Dialogo" type="AcceptDialog" parent="."]
-self_modulate = Color( 0, 0.623529, 0.462745, 1 )
+visible = true
 margin_top = 19.0
-margin_right = 405.0
-margin_bottom = 298.0
+margin_right = 664.0
+margin_bottom = 407.0
 rect_min_size = Vector2( 397, 235.946 )
 theme = SubResource( 1 )
 popup_exclusive = true
@@ -151,10 +156,10 @@ anchor_left = -0.012
 anchor_top = -0.596
 anchor_right = 0.04
 anchor_bottom = -0.034
-margin_left = 12.86
-margin_top = 174.284
-margin_right = 380.8
-margin_bottom = 252.486
+margin_left = 17.7498
+margin_top = 238.357
+margin_right = 631.222
+margin_bottom = 364.301
 size_flags_horizontal = 5
 size_flags_vertical = 5
 __meta__ = {
@@ -167,55 +172,64 @@ scale = Vector2( 0.4, 0.4 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 50, 55 )
 format = 1
-tile_data = PoolIntArray( 65544, 0, 0, 131079, 1, 0, 131080, 4, 0, 131081, 3, 0, 262152, 6, 0, 458758, 2, 0, 458767, 5, 0 )
+tile_data = PoolIntArray( 65549, 0, 0, 131084, 1, 0, 131085, 4, 0, 131086, 3, 0, 327693, 6, 0, 655368, 2, 0, 655385, 5, 0 )
 
 [node name="Flechas" type="Label" parent="Dialogo/Control"]
 margin_left = 26.9779
 margin_top = 20.6017
 margin_right = 374.978
 margin_bottom = 34.6017
+custom_fonts/font = SubResource( 3 )
 text = "Usa las flechas 	                     para moverte por el mapa"
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Accion" type="Label" parent="Dialogo/Control"]
-margin_left = 68.788
-margin_top = 64.4059
-margin_right = 329.788
-margin_bottom = 78.4059
+margin_left = 103.533
+margin_top = 84.0057
+margin_right = 572.533
+margin_bottom = 108.006
+custom_fonts/font = SubResource( 3 )
 text = "Usa la tecla         para arreglar problemas"
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mouse_mover" type="Label" parent="Dialogo/Control"]
-margin_left = 7.0
-margin_top = 142.0
-margin_right = 100.0
-margin_bottom = 173.0
+margin_left = -5.47256
+margin_top = 206.145
+margin_right = 156.527
+margin_bottom = 257.145
+custom_fonts/font = SubResource( 3 )
 text = "Usa el mouse
  para moverte "
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mouse_seleccionar" type="Label" parent="Dialogo/Control"]
-margin_left = 167.931
-margin_top = 142.472
-margin_right = 291.931
-margin_bottom = 173.472
+margin_left = 273.057
+margin_top = 200.38
+margin_right = 486.057
+margin_bottom = 251.38
+custom_fonts/font = SubResource( 3 )
 text = "Y el click izquierdo 
 para seleecionar"
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Dialogo/Control"]
-margin_left = 158.571
-margin_top = 96.7471
-margin_right = 166.571
-margin_bottom = 110.747
+margin_left = 259.243
+margin_top = 135.056
+margin_right = 270.243
+margin_bottom = 159.056
+custom_fonts/font = SubResource( 3 )
 text = "ó"
 __meta__ = {
 "_edit_use_anchors_": false
