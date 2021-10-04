@@ -11,3 +11,12 @@ Juego para diseño de experiencia de usuario
  [Descargar el juego para Windows](https://github.com/kleinher/Citadine-UX/releases/download/v2.0/Inundados.exe)
   y ejecutar usando doble click sobre el archivo ejecutable.
  
+ ## English
+ 
+ <h3>Installation </h3>
+  The game is portable, so there's no need for installation.
+ 
+ <h3>How to play </h3>
+  [Download for Linux](https://github.com/kleinher/Citadine-UX/releases/download/v2.1/Inundados.x86_64) and double-click.
+  
+  [Download for Windows](https://github.com/kleinher/Citadine-UX/releases/download/v2.0/Inundados.exe) and double-click.
