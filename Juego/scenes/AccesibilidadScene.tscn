@@ -49,9 +49,9 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -233.0
+margin_left = -260.0
 margin_top = 20.0
-margin_right = 241.0
+margin_right = 257.0
 margin_bottom = 473.0
 custom_constants/separation = 150
 __meta__ = {
@@ -59,7 +59,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 247.0
 custom_constants/separation = 25
 __meta__ = {
@@ -67,10 +67,10 @@ __meta__ = {
 }
 
 [node name="AccesibilidadTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Accesibilidad"
+text = "Accesibility"
 align = 1
 valign = 1
 __meta__ = {
@@ -79,44 +79,44 @@ __meta__ = {
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 166.0
 
 [node name="TamañoLetrasButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 45.0
-margin_right = 428.0
+margin_left = 133.0
+margin_right = 384.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "1. Tamaño de letras"
+text = "1. Letter size"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 191.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 247.0
 
 [node name="VozButton" type="Button" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
-margin_left = 12.0
-margin_right = 462.0
+margin_left = 48.0
+margin_right = 469.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "2. Configuración de voz"
+text = "2. Voice configuration"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 397.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 453.0
 
 [node name="VolverAConfigButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 56.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "4. Volver a configuración"
+text = "4. Go back to configuration"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -73,80 +73,81 @@ __meta__ = {
 }
 
 [node name="ComoJugarTitle" type="Label" parent="VBoxContainer"]
-margin_right = 1020.0
+margin_right = 1040.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Cómo jugar"
+text = "How to play"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 115.0
-margin_right = 1020.0
-margin_bottom = 687.0
+margin_right = 1033.0
+margin_bottom = 728.0
 custom_constants/separation = 50
 alignment = 1
 
 [node name="ObjetivoVbox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 537.0
-margin_bottom = 572.0
+margin_right = 521.0
+margin_bottom = 613.0
 
 [node name="ObjetivoLabel" type="Label" parent="VBoxContainer/HBoxContainer/ObjetivoVbox"]
-margin_right = 537.0
+margin_right = 521.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 2 )
-text = "Objetivo"
+text = "Objective"
 
 [node name="ObjetivoLabel2" type="Label" parent="VBoxContainer/HBoxContainer/ObjetivoVbox"]
 margin_top = 42.0
-margin_right = 537.0
-margin_bottom = 572.0
+margin_right = 521.0
+margin_bottom = 613.0
 custom_fonts/font = SubResource( 2 )
-text = "El objetivo del juego es arreglar
-la ciudad para evitar que se inunde.
-Cada nivel tiene problemas que 
-deben ser solucionados. Cuando el 
-jugador los solucione o se acabe el
-tiempo, el juego se termina. Para 
-tener más tiempo se debe cambiar
-la dificultad desde el menú Dificultad.
+text = "The aim of the game is to fix the city
+to prevent a flooding. 
+Each level has problems that must
+be solved. When the player solves
+every problem or the time is over,
+the game finishes.
+If you need more time to fix the
+problems, you can change the 
+difficulty from the Difficulty menu.
 
-Las cosas que se pueden arreglar
-son: árboles talados, bocas de 
-tormenta tapadas y casas con 
-basura."
+The things that can be fixed are: 
+chopped down trees, dirty storm
+drains and houses with trash.
+"
 align = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ControlesVbox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 587.0
-margin_right = 1020.0
-margin_bottom = 572.0
+margin_left = 571.0
+margin_right = 1033.0
+margin_bottom = 613.0
 
 [node name="ControlesLabel" type="Label" parent="VBoxContainer/HBoxContainer/ControlesVbox"]
-margin_right = 433.0
+margin_right = 462.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 2 )
-text = "Controles"
+text = "Controls"
 
 [node name="ControlesLabel2" type="Label" parent="VBoxContainer/HBoxContainer/ControlesVbox"]
 margin_top = 42.0
-margin_right = 433.0
+margin_right = 462.0
 margin_bottom = 531.0
 custom_fonts/font = SubResource( 3 )
-text = "Controles de voz:     
-Tecla M: encender y apagar 
-la voz.
-Tecla R: volver a escuchar el
-mensaje.
-Tecla S: detener el mensaje.
+text = "Voice controls:     
+M key: turn on and off the voice.
+R key: repeat the message.
+S key: stop the message
 
-Controles del juego:
-Mouse y flechas del
-teclado: moverse por el mapa.
-Click izquierdo y tecla X: 
-arreglar problema."
+Game controls:
+
+Mouse and arrow keys: move
+around the map.
+
+Left click and X key: fix a 
+problem"
 
 [node name="IrAlMenuScene" parent="." instance=ExtResource( 1 )]
 anchor_left = 0.5
