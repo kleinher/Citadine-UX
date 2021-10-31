@@ -3,7 +3,6 @@
 [ext_resource path="res://scenes/Juego/Counter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/GUI/arbol_icono.png" type="Texture" id=2]
 
-
 [sub_resource type="GDScript" id=1]
 
 [node name="EmeraldCounter" instance=ExtResource( 1 )]

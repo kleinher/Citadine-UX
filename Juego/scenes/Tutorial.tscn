@@ -139,8 +139,9 @@ __meta__ = {
 
 [node name="Dialogo" type="AcceptDialog" parent="."]
 visible = true
+margin_left = 1.88776
 margin_top = 19.0
-margin_right = 664.0
+margin_right = 665.888
 margin_bottom = 407.0
 rect_min_size = Vector2( 397, 235.946 )
 theme = SubResource( 1 )
@@ -156,10 +157,10 @@ anchor_left = -0.012
 anchor_top = -0.596
 anchor_right = 0.04
 anchor_bottom = -0.034
-margin_left = 17.7498
-margin_top = 238.357
-margin_right = 631.222
-margin_bottom = 364.301
+margin_left = 15.968
+margin_top = 239.248
+margin_right = 629.44
+margin_bottom = 365.192
 size_flags_horizontal = 5
 size_flags_vertical = 5
 __meta__ = {
@@ -172,7 +173,7 @@ scale = Vector2( 0.4, 0.4 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 50, 55 )
 format = 1
-tile_data = PoolIntArray( 65549, 0, 0, 131084, 1, 0, 131085, 4, 0, 131086, 3, 0, 327693, 6, 0, 655368, 2, 0, 655385, 5, 0 )
+tile_data = PoolIntArray( 65551, 0, 0, 131086, 1, 0, 131087, 4, 0, 131088, 3, 0, 327691, 6, 0, 655368, 2, 0, 655385, 5, 0 )
 
 [node name="Flechas" type="Label" parent="Dialogo/Control"]
 margin_left = 26.9779
@@ -180,7 +181,7 @@ margin_top = 20.6017
 margin_right = 374.978
 margin_bottom = 34.6017
 custom_fonts/font = SubResource( 3 )
-text = "Usa las flechas 	                     para moverte por el mapa"
+text = "Use  the arrow keys 	                     to move around the map"
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -192,7 +193,7 @@ margin_top = 84.0057
 margin_right = 572.533
 margin_bottom = 108.006
 custom_fonts/font = SubResource( 3 )
-text = "Usa la tecla         para arreglar problemas"
+text = "Use the             key to fix problems"
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -204,8 +205,8 @@ margin_top = 206.145
 margin_right = 156.527
 margin_bottom = 257.145
 custom_fonts/font = SubResource( 3 )
-text = "Usa el mouse
- para moverte "
+text = "Use the mouse
+to move "
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -217,8 +218,8 @@ margin_top = 200.38
 margin_right = 486.057
 margin_bottom = 251.38
 custom_fonts/font = SubResource( 3 )
-text = "Y el click izquierdo 
-para seleecionar"
+text = "And left click
+to fix problems"
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -230,7 +231,7 @@ margin_top = 135.056
 margin_right = 270.243
 margin_bottom = 159.056
 custom_fonts/font = SubResource( 3 )
-text = "ó"
+text = "OR"
 __meta__ = {
 "_edit_use_anchors_": false
 }

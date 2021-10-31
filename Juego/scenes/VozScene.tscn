@@ -11201,7 +11201,7 @@ __meta__ = {
 margin_right = 566.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Voz"
+text = "Voice"
 align = 1
 valign = 1
 __meta__ = {
@@ -11219,14 +11219,14 @@ __meta__ = {
 }
 
 [node name="VelocidadLabel" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 135.0
+margin_right = 134.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
-text = "Velocidad"
+text = "Speed       "
 align = 1
 
 [node name="VelocidadBar" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 165.0
+margin_left = 164.0
 margin_top = 10.0
 margin_right = 566.0
 margin_bottom = 26.0
@@ -11250,14 +11250,14 @@ __meta__ = {
 }
 
 [node name="VolumenLabel" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 121.0
+margin_right = 125.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
-text = "Volumen"
+text = "Volume   "
 align = 1
 
 [node name="VolumenBar" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 169.0
+margin_left = 173.0
 margin_top = 10.0
 margin_right = 566.0
 margin_bottom = 26.0
@@ -11278,7 +11278,7 @@ size_flags_vertical = 4
 theme = SubResource( 1500 )
 custom_fonts/font = SubResource( 1501 )
 pressed = true
-text = "Encendida"
+text = "Turned on"
 expand_icon = true
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
@@ -11287,14 +11287,14 @@ margin_right = 566.0
 margin_bottom = 420.0
 
 [node name="VolverAAccesibilidadButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_left = 51.0
-margin_right = 514.0
+margin_left = 33.0
+margin_right = 532.0
 margin_bottom = 56.0
 focus_mode = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 1502 )
-text = "4. Volver a accesibilidad"
+text = "4. Go back to accessibility"
 __meta__ = {
 "_edit_use_anchors_": false
 }

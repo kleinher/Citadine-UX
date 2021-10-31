@@ -6,7 +6,6 @@
 [ext_resource path="res://assets/GUI/label_EP.png" type="Texture" id=4]
 [ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 20
 extra_spacing_bottom = 8

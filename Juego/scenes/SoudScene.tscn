@@ -63,17 +63,16 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -228.0
-margin_top = 20.0
-margin_right = 229.0
-margin_bottom = 398.0
+margin_left = -260.0
+margin_right = 257.0
+margin_bottom = 452.0
 custom_constants/separation = 250
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 146.0
 custom_constants/separation = 25
 __meta__ = {
@@ -81,10 +80,10 @@ __meta__ = {
 }
 
 [node name="ConfigurationTitle" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
-text = "Sonido"
+text = "Sound"
 align = 1
 valign = 1
 __meta__ = {
@@ -93,7 +92,7 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 margin_top = 110.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 146.0
 grow_vertical = 0
 custom_constants/separation = 20
@@ -102,16 +101,16 @@ __meta__ = {
 }
 
 [node name="SoundTitle" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 121.0
+margin_right = 104.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
-text = "Volumen"
+text = "Volume"
 align = 1
 
 [node name="Music" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 141.0
+margin_left = 124.0
 margin_top = 10.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 26.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -121,16 +120,16 @@ max_value = 0.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 396.0
-margin_right = 474.0
+margin_right = 517.0
 margin_bottom = 452.0
 
 [node name="VolverAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer"]
-margin_right = 474.0
-margin_bottom = 56.0
+margin_right = 517.0
+margin_bottom = 60.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 4 )
-text = "4. Volver a configuración"
+text = "4. Go back to configuration"
 __meta__ = {
 "_edit_use_anchors_": false
 }

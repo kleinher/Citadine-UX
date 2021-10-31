@@ -120,7 +120,7 @@ rect_min_size = Vector2( 340, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 2 )
-text = "3. Accesibility"
+text = "3. Accessibility"
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 margin_top = 403.0

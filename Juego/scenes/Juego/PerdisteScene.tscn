@@ -84,7 +84,7 @@ custom_constants/separation = 30
 margin_right = 1080.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 1 )
-text = "¡Es terrible, la lluvia causó una inundación!"
+text = "It's terrible, the rain caused a flood!"
 align = 1
 valign = 1
 __meta__ = {
@@ -96,11 +96,13 @@ margin_top = 80.0
 margin_right = 1080.0
 margin_bottom = 399.0
 custom_fonts/font = SubResource( 2 )
-text = "¡La ciudad necesita más árboles para poder soportar la inundación!
+text = "The city needs more trees to be able to withstand the flood!
 
-¡Asegurate de quitar la basura de las casas!
+Make sure to remove the garbage from the houses!
 
-Los desagües de las calles deben de estar limpios para que el agua se vaya."
+Street drains must be clean for the water to drain away.
+
+"
 align = 1
 autowrap = true
 
@@ -110,33 +112,33 @@ margin_right = 1080.0
 margin_bottom = 485.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer2"]
-margin_left = 83.0
-margin_right = 997.0
+margin_left = 92.0
+margin_right = 988.0
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( -556.351, -190.203 )
 custom_constants/separation = 200
 
 [node name="IrAlMenuButton" type="Button" parent="VBoxContainer/CenterContainer2/HBoxContainer"]
-margin_right = 320.0
+margin_right = 376.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 320, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 3 )
-text = "1. Ir al menú"
+text = "1. Go to main menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VolverAIntentarloButton" type="Button" parent="VBoxContainer/CenterContainer2/HBoxContainer"]
-margin_left = 520.0
-margin_right = 914.0
+margin_left = 576.0
+margin_right = 896.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 320, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 3 )
-text = "2. Volver a intentarlo"
+text = "2. Try again"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -154,7 +156,7 @@ rect_min_size = Vector2( 320, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 3 )
-text = "4. Salir del juego"
+text = "4.Exit the game"
 __meta__ = {
 "_edit_use_anchors_": false
 }

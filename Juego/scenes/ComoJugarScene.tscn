@@ -73,7 +73,7 @@ __meta__ = {
 }
 
 [node name="ComoJugarTitle" type="Label" parent="VBoxContainer"]
-margin_right = 1040.0
+margin_right = 1033.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 1 )
 text = "How to play"

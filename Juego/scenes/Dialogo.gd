@@ -6,7 +6,7 @@ func _ready():
 	var close_button = get_close_button()
 	
 	close_button.visible = false
-	ok_button.text = "   Entendido   "
+	ok_button.text = "   OK   "
 	
 
 
