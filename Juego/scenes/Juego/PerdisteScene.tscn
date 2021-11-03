@@ -84,7 +84,7 @@ custom_constants/separation = 30
 margin_right = 1080.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 1 )
-text = "It's terrible, the rain caused a flood!"
+text = "Oh no, the rain caused a flooding!"
 align = 1
 valign = 1
 __meta__ = {
@@ -156,7 +156,7 @@ rect_min_size = Vector2( 320, 0 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
 custom_fonts/font = SubResource( 3 )
-text = "4.Exit the game"
+text = "4. Exit the game"
 __meta__ = {
 "_edit_use_anchors_": false
 }

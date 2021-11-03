@@ -40,9 +40,9 @@ __meta__ = {
 [node name="VBoxColor" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -268.0
+margin_left = -250.0
 margin_top = 20.0
-margin_right = 268.0
+margin_right = 250.0
 margin_bottom = 124.0
 __meta__ = {
 "_edit_use_anchors_": false

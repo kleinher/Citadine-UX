@@ -51,9 +51,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="IrAlMenuScene" parent="." instance=ExtResource( 8 )]
-margin_left = -1.20694
+margin_left = 23.3338
 margin_top = 663.504
-margin_right = 238.794
+margin_right = 263.335
 margin_bottom = 663.504
 
 [node name="NubeTimer" type="Timer" parent="."]
